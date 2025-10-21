@@ -12,7 +12,7 @@ Build anything from simple UI components to full-stack applications. But what se
 
 **Popular use cases:**
 
-**CRM System Dashboard [https://youware.app/project/4qdcrcxlzk?enter_from=search_result](https://youware.app/project/4qdcrcxlzk?enter_from=search_result)**
+[**CRM System Dashboard https://youware.app/project/4qdcrcxlzk?enter_from=search_result**](https://youware.app/project/4qdcrcxlzk?enter_from=search_result)
 
 **Car Dashboard Interface**
 
@@ -26,7 +26,7 @@ Build anything from simple UI components to full-stack applications. But what se
 
 [**https://youware.app/project/j4v8odiihv?enter_from=search_result**](https://youware.app/project/j4v8odiihv?enter_from=search_result)
 
-**dashboard  观看视频：[https://www.youtube.com/watch?v=mlISmbdWVN8](https://www.youtube.com/watch?v=mlISmbdWVN8)**
+[**dashboard  观看视频：https://www.youtube.com/watch?v=mlISmbdWVN8**](https://www.youtube.com/watch?v=mlISmbdWVN8)
 
 - **Creative Projects**: Interactive games, productivity tools, experimental apps
 - **Websites & Apps**: Landing pages, e-commerce stores, project management tools, mobile games, social apps

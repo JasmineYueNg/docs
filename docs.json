@@ -17,6 +17,7 @@
             "group": "Getting started",
             "pages": [
               "index",
+              "getting-started/introductiontest",
               "quickstart",
               "development"
             ]
