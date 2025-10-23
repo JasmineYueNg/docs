@@ -97,10 +97,10 @@
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
+"logo": {
+  "light": "/logo/youware-logo.svg",
+  "dark": "/logo/youware-logo.svg"
+},
   "navbar": {
     "links": [
       {
