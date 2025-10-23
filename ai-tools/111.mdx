@@ -1,0 +1,85 @@
+---
+title: "New file"
+description: "Description of your new file."
+mode: "custom"
+---
+
+---
+
+title: "Quickstart"
+
+sidebarTitle: "Quickstart"
+
+description: "Start building awesome documentation in minutes"
+
+---
+
+# Quickstart
+
+Start building awesome documentation in minutes.
+
+## Get started in three steps
+
+Get your documentation site running locally and make your first customization.
+
+\<Steps\>
+
+\<Step title="Set up your local environment"\>
+
+\<AccordionGroup\>
+
+  \<Accordion title="Clone your docs locally"\>
+
+    \`\`\`bash
+
+    git clone https://github.com/\<your-org\>/\<your-docs-repo\>.git
+
+    cd \<your-docs-repo\>
+
+    \`\`\`
+
+  \</Accordion\>
+
+  \<Accordion title="Start the preview server"\>
+
+    1. Install the Mintlify CLI  
+
+       \`\`\`bash
+
+       npm i -g mint
+
+       \`\`\`
+
+    2. Navigate to your docs directory and run  
+
+       \`\`\`bash
+
+       mint dev
+
+       \`\`\`
+
+    3. Open `http://localhost:3000`
+
+    \<Callout type="success"\>
+
+      Your preview updates automatically as you edit files.
+
+    \</Callout\>
+
+  \</Accordion\>
+
+\</AccordionGroup\>
+
+\</Step\>
+
+\<Step title="Deploy your changes"\>
+
+Install our GitHub app and push to `main`. Each commit triggers an automatic build & deploy.
+
+\`\`\`bash
+
+git add .
+
+git commit -m "My first docs page"
+
+git push origin main
