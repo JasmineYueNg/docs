@@ -17,22 +17,14 @@
             "group": "Getting started",
             "pages": [
               "getting-started/introduction",
-              "quickstart",
-              "development"
+              "quickstart"
             ]
           }
         ]
       },
       {
         "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          }
-        ]
+        "groups": []
       }
     ]
   }
