@@ -1,0 +1,102 @@
+---
+title: "Multi-Model Switching | YouWare AI Platform"
+description: "Switch between 5 top AI models (OpenAI, Anthropic, Moonshot, Z.ai) to optimize efficiency and costs for different tasks. Choose the right model for each scenario."
+canonical: "https://docs.youware.com/feature/multi-model-switching"
+---
+
+
+# Multi-Model Switching
+
+<Frame>
+  <img src="/images/multi-model-switching-demo.gif" alt="Multi-model switching interface demonstration" />
+</Frame>
+
+For the same requirement, it takes 20 points with Claude and 5 points with GLM. But Claude can handle complex tasks at once, GLM may need to debug 3 times.
+
+<Tip>
+**Model selection directly determines your efficiency and cost.** YouWare now integrates 5 top AI models, from OpenAI and Anthropic to Moonshot and Z.ai - you can switch at any time in the bottom right corner of the input box to match the task to pick the right tool.
+</Tip>
+
+## Why Multiple Models Matter
+
+**A single model can't fulfill all scenarios:**
+
+<CardGroup cols={2}>
+  <Card title="Rapid Prototyping" icon="zap">
+    Don't need the most intelligence, but are burning the most expensive points
+  </Card>
+  <Card title="Complex Agent Tasks" icon="brain">
+    Require top-level reasoning, and weak models will repeatedly make mistakes
+  </Card>
+  <Card title="Long Documents" icon="globe">
+    Small context windows truncate key information when processing
+  </Card>
+  <Card title="Service Reliability" icon="check-circle">
+    When one model's service breaks, all projects are stuck
+  </Card>
+</CardGroup>
+
+## Model Matrix Flexibility
+
+<Frame>
+  <img src="/images/model-comparison-card.png" alt="Model comparison card showing different AI models and their capabilities" />
+</Frame>
+
+<CardGroup cols={2}>
+  <Card title="Daily Tasks" icon="dollar-sign">
+    Low-cost models for fast iteration
+  </Card>
+  <Card title="Core Functionality" icon="brain">
+    Top models for quality assurance
+  </Card>
+  <Card title="Long Documents" icon="globe">
+    Large context windows for complete processing
+  </Card>
+  <Card title="Service Degradation" icon="arrow-up-down">
+    Automatic switching to available models
+  </Card>
+</CardGroup>
+
+## How to Switch Models
+
+<Accordion title="Quick Switching Guide">
+  <Steps>
+    <Step title="Open Model Selector">
+      Click the current model name (default "Claude Sonnet 4.5") in the lower right corner of the input box
+    </Step>
+    <Step title="Browse Available Models">
+      Drop-down menu shows all 5 models
+    </Step>
+    <Step title="Review Model Details">
+      Hover to view detailed information card (speed, intelligence, cost, support capability)
+    </Step>
+    <Step title="Confirm Selection">
+      Click on the target model and "✓" on the right to confirm switching
+    </Step>
+  </Steps>
+</Accordion>
+
+## Model Information Cards
+
+<Accordion title="What's Included in Each Card">
+  Each model information card provides comprehensive decision-making data:
+
+  <CardGroup cols={1}>
+    <Card title="Performance Metrics">
+      5-panel progress bar comparison for Speed and Intelligence levels
+    </Card>
+    <Card title="Cost Analysis">
+      Clear cost levels: Low, Standard, or Max pricing tiers
+    </Card>
+    <Card title="Context Capacity">
+      Token limits and corresponding word count estimations
+    </Card>
+    <Card title="Feature Support">
+      Capability tags including Web Search, MCP, and Vision support
+    </Card>
+  </CardGroup>
+</Accordion>
+
+<Note>
+Switching between models is instant and takes just 3 seconds to complete. Choose the optimal model based on your specific task requirements and budget constraints.
+</Note>
