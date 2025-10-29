@@ -4,12 +4,25 @@
   "theme": "mint",
   "colors": {
     "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "light": "#07C983"
+  },
+  "appearance": {
+    "disableDarkMode": true
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
+      {
+        "tab": "Introduction",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction/youware-quick-start-guide"
+            ]
+          }
+        ]
+      },
       {
         "tab": "Features",
         "groups": [
