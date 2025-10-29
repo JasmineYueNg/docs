@@ -29,7 +29,6 @@
             "group": "Core capabilities",
             "pages": [
               "features/overview",
-              "features/ai-app",
               "features/deployment"
             ]
           }
