@@ -1,9 +1,9 @@
 {
-  "$schema": "https://YouWare.com/docs.json",
+  "$schema": "https://mintlify.com/docs.schema.json",
+  "name": "YouWare Docs",
   "theme": "mint",
-  "name": "YouWare doc",
   "colors": {
-    "primary": "#1A634A",
+    "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
@@ -11,32 +11,24 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "getting-started/introduction",
-              "quickstart"
-            ]
-          }
-        ]
-      },
-      {
         "tab": "Features",
         "groups": [
           {
-            "group": "Core capabilities",
+            "group": "Core Features",
             "pages": [
-              "features/overview",
-              "features/deployment"
+              "features/boost",
+              "features/code-view",
+              "features/creator-studio",
+              "features/ide-plugin",
+              "features/mcp-market",
+              "features/mobile",
+              "features/multi-model-switching",
+              "features/remix",
+              "features/share",
+              "features/upload-code"
             ]
           }
         ]
-      },
-      {
-        "tab": "API reference",
-        "groups": []
       }
     ]
   }
