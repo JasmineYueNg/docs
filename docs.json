@@ -57,8 +57,9 @@
           {
             "group": "Integrations",
             "pages": [
-              "connections/ai-app-integration",
               "connections/mcp-introduction",
+              "connections/ai-app-integration",
+              "connections/figma-integration",
               "connections/youware-backend-integration"
             ]
           }
