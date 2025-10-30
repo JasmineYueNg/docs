@@ -1,0 +1,232 @@
+---
+title: "Figma Integration - Convert Designs to Code with AI"
+description: "Connect Figma to YouWare's AI and automatically convert your designs into pixel-perfect, responsive web code. Complete setup guide and best practices."
+canonical: "https://docs.youware.com/feature/figma-integration"
+icon: "figma"
+---
+
+## What is the Figma Integration?
+
+The Figma integration bridges the gap between design and development by connecting your design files directly to YouWare's AI. Using Figma's "Copy link to selection" feature, you can point our AI to any component, section, or entire page in your design. The AI then analyzes the visual context to generate pixel-perfect web code.
+
+<CardGroup cols={3}>
+  <Card title="Design-First Approach" icon="palette">
+    Use your Figma designs as the blueprint for precise AI code generation
+  </Card>
+  <Card title="Pixel-Perfect Output" icon="target">
+    Generate HTML, CSS, and JavaScript that matches your designs exactly
+  </Card>
+  <Card title="Instant Conversion" icon="zap">
+    Turn design mockups into functional web pages within minutes
+  </Card>
+</CardGroup>
+
+## Key Benefits
+
+<Card title="Accelerated Development" icon="rocket">
+  **Design-to-Code Velocity**
+
+  Transform design concepts into working prototypes and production code in minutes, drastically reducing development time.
+</Card>
+
+<Card title="Perfect Accuracy" icon="check-circle">
+  **Pixel-Perfect Code**
+
+  The AI uses your Figma design as a blueprint, eliminating manual work to match code to design specifications.
+</Card>
+
+<Card title="Team Collaboration" icon="users">
+  **Seamless Workflow**
+
+  Designers and developers work in parallel, with the design file serving as the single source of truth for AI generation.
+</Card>
+
+## Setup Your Figma Access Token
+
+<Warning>
+  You need a Personal Access Token (PAT) to connect Figma. This token allows YouWare's MCP to securely access your design files via the Figma API.
+</Warning>
+
+<Steps>
+  <Step title="Access Profile Settings">
+    Click on your avatar in the top-left corner of Figma and select **Settings** from the dropdown menu.
+  </Step>
+  <Step title="Navigate to Security">
+    In the Settings page, select the **Security** tab and scroll down to the **Personal access tokens** section.
+  </Step>
+  <Step title="Generate New Token">
+    Click the **Generate new token** button to create a new access token.
+  </Step>
+  <Step title="Configure Token Settings">
+    Set up your token with the following configuration:
+
+    - **Token Name:** `YouWare MCP` (or any recognizable name)
+    - **Expiration:** 90 days (recommended for security)
+    - **Required Scopes:**
+      - `file_content:read`
+      - `file_dev_resources:read`
+      - `projects:read`
+  </Step>
+  <Step title="Save Token Securely">
+    <Note>
+      Copy the token immediately after generation - you won't be able to see it again!
+    </Note>
+  </Step>
+</Steps>
+
+## Best Practice: Section-by-Section Conversion
+
+<Tip>
+  For optimal results, convert your Figma designs section by section rather than converting entire pages at once.
+</Tip>
+
+### Why This Approach Works
+
+<CardGroup cols={2}>
+  <Card title="Higher Accuracy" icon="crosshair">
+    AI focuses on specific details of each section for precise code generation
+  </Card>
+  <Card title="Better Structure" icon="layout-grid">
+    Each section gets properly organized code with clean boundaries
+  </Card>
+  <Card title="Easier Debugging" icon="bug">
+    Quickly identify and fix issues in specific sections
+  </Card>
+  <Card title="Faster Iterations" icon="refresh-cw">
+    Make changes to individual sections without regenerating entire pages
+  </Card>
+</CardGroup>
+
+### Implementation Process
+
+<Steps>
+  <Step title="Select Design Section">
+    In Figma, select a specific section (header, hero, features, footer, etc.)
+  </Step>
+  <Step title="Copy Section Link">
+    Right-click and choose "Copy link to selection"
+  </Step>
+  <Step title="Generate Code">
+    Paste the link into YouWare and let the AI generate that section's code
+  </Step>
+  <Step title="Repeat for Each Section">
+    Continue this process for each major section of your design
+  </Step>
+  <Step title="Assemble Final Page">
+    The AI will combine all sections into a cohesive, fully functional page
+  </Step>
+</Steps>
+
+## Real-World Use Cases
+
+<Tabs>
+  <Tab title="Pro Creator">
+    **Portfolio Site Development**
+
+    **Scenario:** You've designed a stunning portfolio layout in Figma and need a fast, pixel-perfect website.
+
+    **Solution:** YouWare's AI reads your Figma design as the single source of truth, generating clean, responsive code that matches your creative vision exactly.
+
+    **Example Prompt:**
+
+    ```
+    Convert my Figma portfolio design into a responsive website. 
+    Here's the link to my hero section: [Figma link]. 
+    Make sure the typography, spacing, and colors match exactly.
+    ```
+  </Tab>
+  <Tab title="Small Business">
+    **Product Landing Page**
+
+    **Scenario:** Your marketing team has a tight deadline to launch a new product landing page.
+
+    **Solution:** The AI instantly generates a live, functional webpage from your Figma design, meeting urgent launch deadlines.
+
+    **Example Prompt:**
+
+    ```
+    Create a product landing page from this Figma design: [Figma link]. 
+    Include the hero section, features grid, testimonials, and CTA button. 
+    Make it fully responsive and conversion-optimized.
+    ```
+  </Tab>
+  <Tab title="Startup Founder">
+    **MVP Development**
+
+    **Scenario:** You need to turn designer mockups into a working prototype quickly for investor meetings.
+
+    **Solution:** The AI converts Figma designs into functional code section by section, creating professional prototypes rapidly.
+
+    **Example Prompt:**
+
+    ```
+    Convert this Figma dashboard design into a working prototype: [Figma link]. 
+    Start with the navigation bar and main content area. 
+    Make all buttons functional with proper interactions.
+    ```
+  </Tab>
+  <Tab title="Freelance Designer">
+    **Code Delivery**
+
+    **Scenario:** Your clients want working HTML/CSS they can use immediately without additional development work.
+
+    **Solution:** Deliver both beautiful designs and production-ready code without learning programming languages.
+
+    **Example Prompt:**
+
+    ```
+    Turn my Figma website design into clean HTML and CSS code: [Figma link]. 
+    Generate each section separately starting with the header.
+    Include semantic HTML and responsive design patterns.
+    ```
+  </Tab>
+</Tabs>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="What is Figma integration and why do I need it?" icon="help-circle">
+    Figma integration connects your design files to YouWare's AI, allowing automatic conversion of visual designs into pixel-perfect, functional web code. You need it when you want to turn design mockups into real websites without manually coding every detail.
+  </Accordion>
+  <Accordion title="Do I need coding knowledge to use this?" icon="code">
+    No coding knowledge required! Simply copy a link to your Figma design, paste it into YouWare, and the AI generates the code automatically with proper structure and responsive design.
+  </Accordion>
+  <Accordion title="How do I get a Figma Personal Access Token?" icon="key">
+    1. Click your avatar in Figma and select **Settings**
+    2. Go to the **Security** tab
+    3. Scroll to **Personal access tokens** and click **Generate new token**
+    4. Name it (e.g., "YouWare MCP"), set expiration (90 days recommended)
+    5. Enable these scopes: `file_content:read`, `file_dev_resources:read`, `projects:read`
+    6. Copy the token immediately (you won't see it again!)
+  </Accordion>
+  <Accordion title="What Figma permissions do I need?" icon="shield-check">
+    You need three essential scopes:
+
+    - `file_content:read` - Allows reading design content and specifications
+    - `file_dev_resources:read` - Allows reading development resources and assets
+    - `projects:read` - Allows reading project structure and organization
+  </Accordion>
+  <Accordion title="Should I convert entire pages or sections?" icon="layout">
+    **We strongly recommend section-by-section conversion** for optimal results:
+
+    - Higher accuracy and precision in code generation
+    - Better organized code structure with clean boundaries
+    - Easier debugging and targeted adjustments
+    - Faster iterations on specific sections without affecting others
+  </Accordion>
+  <Accordion title="How do I copy a link to a specific section?" icon="link">
+    In Figma, select the frame or section you want to convert, right-click, and choose "Copy link to selection." Then paste that specific link into YouWare for targeted code generation.
+  </Accordion>
+  <Accordion title="Will the generated code match my design exactly?" icon="target">
+    Yes! YouWare's AI generates pixel-perfect code matching your Figma design's typography, spacing, colors, and layout specifications. Section-by-section conversion provides the most accurate results.
+  </Accordion>
+  <Accordion title="Does it work with responsive designs?" icon="smartphone">
+    Absolutely! The AI recognizes responsive design patterns in your Figma file and generates responsive CSS code that adapts beautifully to different screen sizes and devices.
+  </Accordion>
+  <Accordion title="What if I update my design later?" icon="refresh-cw">
+    Simply copy the link to the updated section and regenerate that specific part. The AI will create fresh code based on your latest design changes without affecting other sections.
+  </Accordion>
+  <Accordion title="Can I use Community templates?" icon="users">
+    Yes! You can use any Figma file you have access to, including Community templates. Just make sure to duplicate them to your workspace first so you have full access permissions.
+  </Accordion>
+</AccordionGroup>
