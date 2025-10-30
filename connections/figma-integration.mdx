@@ -1,0 +1,494 @@
+---
+title: "Figma Integration - Turn Designs into Code Instantly"
+description: "Learn how to connect Figma to YouWare's AI and convert your designs into pixel-perfect, functional web code automatically using personal access tokens."
+canonical: "https://docs.youware.com/feature/figma-integration"
+icon: "figma"
+---
+
+import { Zap, Layers, Users, Clock, Target, Code2, Palette, Rocket } from "lucide-react"
+
+<Card>
+  <CardHeader>
+    <CardTitle className="flex items-center gap-2">
+      <Figma className="h-5 w-5" />
+      Figma Integration
+    </CardTitle>
+    <CardDescription>
+      Turn your Figma designs into live web pages with AI—instantly and pixel-perfectly.
+    </CardDescription>
+  </CardHeader>
+</Card>
+
+## What is the Figma Tool?
+
+<div className="flex items-start gap-4 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
+  <div className="flex-shrink-0">
+    <Code2 className="h-8 w-8 text-blue-600" />
+  </div>
+  <div className="flex-1">
+    <p className="text-gray-800">
+      The Figma tool bridges the gap between design and development by connecting your design files directly to YouWare's AI. By using "Copy link to selection" in Figma, you can point our AI to a specific component, section, or entire page in your design. The AI then uses that visual context to generate the corresponding, pixel-perfect web code.
+    </p>
+  </div>
+</div>
+
+### Key Features
+
+<div className="grid md:grid-cols-2 gap-4 mt-6">
+  <Card>
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2 text-sm">
+        <Target className="h-4 w-4 text-green-600" />
+        Purpose
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p className="text-sm text-gray-600">
+        Connects your Figma design files to YouWare's AI code generation engine.
+      </p>
+    </CardContent>
+  </Card>
+
+  <Card>
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2 text-sm">
+        <Zap className="h-4 w-4 text-blue-600" />
+        Function
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p className="text-sm text-gray-600">
+        The AI reads the visual design from a Figma link and generates the necessary HTML, CSS, and JavaScript.
+      </p>
+    </CardContent>
+  </Card>
+
+  <Card>
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2 text-sm">
+        <Rocket className="h-4 w-4 text-purple-600" />
+        Benefit
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p className="text-sm text-gray-600">
+        Turns design mockups into functional web pages instantly, ensuring design fidelity.
+      </p>
+    </CardContent>
+  </Card>
+
+  <Card>
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2 text-sm">
+        <Users className="h-4 w-4 text-orange-600" />
+        Usage
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p className="text-sm text-gray-600">
+        Use the "Copy link to selection" feature in Figma to target specific design elements.
+      </p>
+    </CardContent>
+  </Card>
+</div>
+
+## Key Benefits of Figma Integration
+
+<div className="space-y-6 mt-8">
+  <div className="flex items-start gap-4">
+    <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+      <Target className="h-5 w-5 text-green-600" />
+    </div>
+    <div>
+      <h3 className="font-semibold text-gray-900 mb-2">Pixel-Perfect Code</h3>
+      <p className="text-gray-600">The AI uses the Figma design as a blueprint, drastically reducing the time spent manually matching code to design.</p>
+    </div>
+  </div>
+
+  <div className="flex items-start gap-4">
+    <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+      <Zap className="h-5 w-5 text-blue-600" />
+    </div>
+    <div>
+      <h3 className="font-semibold text-gray-900 mb-2">Design-to-Code Velocity</h3>
+      <p className="text-gray-600">Accelerate your development cycle by turning design concepts into working prototypes and production code in minutes.</p>
+    </div>
+  </div>
+
+  <div className="flex items-start gap-4">
+    <div className="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+      <Users className="h-5 w-5 text-purple-600" />
+    </div>
+    <div>
+      <h3 className="font-semibold text-gray-900 mb-2">Seamless Collaboration</h3>
+      <p className="text-gray-600">Designers and developers can work in parallel, with the design file serving as the single source of truth for the AI.</p>
+    </div>
+  </div>
+</div>
+
+## How to Get Your Figma Access Token
+
+<Warning>
+  You need a Personal Access Token (PAT) to connect Figma. This token allows YouWare's MCP to securely access your design files via the Figma API.
+</Warning>
+
+<Accordion type="single" collapsible>
+  <AccordionItem value="setup-screenshot">
+    <AccordionTrigger>View Setup Screenshot</AccordionTrigger>
+    <AccordionContent>
+      <img 
+        src="/images/figma-access-token-setup.png" 
+        alt="Figma Personal Access Token Setup Interface" 
+        className="w-full max-w-4xl mx-auto rounded-lg shadow-md"
+      />
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+
+### Step-by-Step Setup
+
+<Steps>
+  <Step title="Access Profile Settings">
+    Click on your avatar in the top-left corner and select **Settings** from the dropdown menu.
+  </Step>
+  
+  <Step title="Generate New Token">
+    In the Settings page, select the **Security** tab and scroll down to the **Personal access tokens** section. Click the **Generate new token** button.
+  </Step>
+  
+  <Step title="Configure Token Settings">
+    <div className="space-y-3">
+      <div>
+        <strong>Token Name:</strong> Give your token a recognizable name, like <code>YouWare MCP</code>
+      </div>
+      <div>
+        <strong>Expiration:</strong> We recommend setting the expiration to a reasonable period, such as 90 days
+      </div>
+      <div>
+        <strong>Scopes:</strong> Set the following permissions:
+        <ul className="list-disc list-inside mt-2 space-y-1">
+          <li><code>file_content:read</code></li>
+          <li><code>file_dev_resources:read</code></li>
+          <li><code>projects:read</code></li>
+        </ul>
+      </div>
+    </div>
+  </Step>
+  
+  <Step title="Copy Token Immediately">
+    <div className="p-4 bg-amber-50 border border-amber-200 rounded-lg">
+      <div className="flex items-center gap-2 mb-2">
+        <Clock className="h-4 w-4 text-amber-600" />
+        <strong className="text-amber-800">Important:</strong>
+      </div>
+      <p className="text-amber-700">
+        Once the token is generated, copy it right away — you won't be able to see it again. Make sure to copy your personal access token now as you will only be able to see this once.
+      </p>
+    </div>
+  </Step>
+</Steps>
+
+## Pro Tip: Section-by-Section Conversion
+
+<Tip>
+  **For optimal results, we recommend copying and converting your Figma designs section by section rather than converting the entire page at once.**
+</Tip>
+
+### Why This Approach Works Better
+
+<div className="grid md:grid-cols-2 gap-4 mt-4">
+  <Card>
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2 text-sm">
+        <Target className="h-4 w-4" />
+        Higher Accuracy
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p className="text-sm">The AI can focus on the specific details of each section, resulting in more precise code generation.</p>
+    </CardContent>
+  </Card>
+
+  <Card>
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2 text-sm">
+        <Layers className="h-4 w-4" />
+        Better Structure
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p className="text-sm">Each section gets properly organized code with clean component boundaries.</p>
+    </CardContent>
+  </Card>
+
+  <Card>
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2 text-sm">
+        <Code2 className="h-4 w-4" />
+        Easier Debugging
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p className="text-sm">If something needs adjustment, you can quickly identify and fix specific sections.</p>
+    </CardContent>
+  </Card>
+
+  <Card>
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2 text-sm">
+        <Zap className="h-4 w-4" />
+        Faster Iterations
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p className="text-sm">Make changes to individual sections without regenerating the entire page.</p>
+    </CardContent>
+  </Card>
+</div>
+
+### How to Do It
+
+<Steps>
+  <Step title="Select Section">
+    In Figma, select a specific section (header, hero, features, footer, etc.)
+  </Step>
+  
+  <Step title="Copy Link">
+    Right-click and choose "Copy link to selection"
+  </Step>
+  
+  <Step title="Generate Code">
+    Paste the link into YouWare and let the AI generate that section
+  </Step>
+  
+  <Step title="Repeat Process">
+    Repeat for each major section of your design
+  </Step>
+  
+  <Step title="Assemble">
+    The AI will assemble all sections into a cohesive, fully functional page
+  </Step>
+</Steps>
+
+## Real-World Use Cases
+
+<Tabs defaultValue="pro-creator">
+  <TabsList>
+    <TabsTrigger value="pro-creator">Pro Creator</TabsTrigger>
+    <TabsTrigger value="small-business">Small Business</TabsTrigger>
+    <TabsTrigger value="startup">Startup Founder</TabsTrigger>
+    <TabsTrigger value="freelancer">Freelance Designer</TabsTrigger>
+  </TabsList>
+
+  <TabsContent value="pro-creator">
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Palette className="h-5 w-5 text-purple-600" />
+          Turning a Design Mockup into a Portfolio Site
+        </CardTitle>
+        <CardDescription>
+          You've designed a stunning, unique portfolio layout in Figma and need a fast, pixel-perfect website to showcase your work.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div>
+          <h4 className="font-medium mb-2">How Figma Integration Helps:</h4>
+          <p className="text-gray-600">
+            YouWare's AI reads your Figma design as the single source of truth, generating clean, responsive code. This is Design-to-Code Velocity in action, ensuring your live site looks exactly like your beautiful mockup.
+          </p>
+        </div>
+        <div>
+          <h4 className="font-medium mb-2">Example Prompt:</h4>
+          <div className="p-3 bg-gray-100 rounded-lg">
+            <code className="text-sm">
+              "Convert my Figma portfolio design into a responsive website. Here's the link to my hero section: [Figma link]. Make sure the typography, spacing, and colors match exactly."
+            </code>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  </TabsContent>
+
+  <TabsContent value="small-business">
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Rocket className="h-5 w-5 text-blue-600" />
+          Rapidly Prototyping a Landing Page for a New Product
+        </CardTitle>
+        <CardDescription>
+          Your marketing team has a tight deadline to launch a new product landing page, and they need to iterate quickly on the design.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div>
+          <h4 className="font-medium mb-2">How Figma Integration Helps:</h4>
+          <p className="text-gray-600">
+            The AI takes the latest Figma design and instantly generates a live, functional webpage. This allows the team to test designs with real code and iterate in hours, not days, drastically speeding up your time-to-market.
+          </p>
+        </div>
+        <div>
+          <h4 className="font-medium mb-2">Example Prompt:</h4>
+          <div className="p-3 bg-gray-100 rounded-lg">
+            <code className="text-sm">
+              "Create a product landing page from this Figma design: [Figma link]. Include the hero section, features grid, testimonials, and CTA button. Make it fully responsive."
+            </code>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  </TabsContent>
+
+  <TabsContent value="startup">
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Zap className="h-5 w-5 text-green-600" />
+          Building an MVP from Design Files
+        </CardTitle>
+        <CardDescription>
+          You have investor meetings coming up and need to turn your designer's mockups into a working prototype quickly.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div>
+          <h4 className="font-medium mb-2">How Figma Integration Helps:</h4>
+          <p className="text-gray-600">
+            The AI converts your Figma designs into functional code section by section, allowing you to have a clickable, interactive prototype ready for demos in hours instead of weeks.
+          </p>
+        </div>
+        <div>
+          <h4 className="font-medium mb-2">Example Prompt:</h4>
+          <div className="p-3 bg-gray-100 rounded-lg">
+            <code className="text-sm">
+              "Convert this Figma dashboard design into a working prototype: [Figma link]. Start with the navigation bar and main content area. Make all buttons and interactions functional."
+            </code>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  </TabsContent>
+
+  <TabsContent value="freelancer">
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Users className="h-5 w-5 text-orange-600" />
+          Delivering Code Along with Designs
+        </CardTitle>
+        <CardDescription>
+          Your clients want not just design files, but working HTML/CSS they can use immediately.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div>
+          <h4 className="font-medium mb-2">How Figma Integration Helps:</h4>
+          <p className="text-gray-600">
+            With Figma integration, you can deliver both beautiful designs and production-ready code, adding tremendous value to your services without learning to code yourself.
+          </p>
+        </div>
+        <div>
+          <h4 className="font-medium mb-2">Example Prompt:</h4>
+          <div className="p-3 bg-gray-100 rounded-lg">
+            <code className="text-sm">
+              "Turn my Figma website design into clean HTML and CSS code: [Figma link]. Generate each section separately starting with the header, then the about section."
+            </code>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  </TabsContent>
+</Tabs>
+
+## Frequently Asked Questions
+
+<Accordion type="single" collapsible>
+  <AccordionItem value="what-is-integration">
+    <AccordionTrigger>What is Figma integration and why do I need it?</AccordionTrigger>
+    <AccordionContent>
+      Figma integration connects your Figma design files to YouWare's AI, allowing you to convert visual designs into pixel-perfect, functional web code automatically. You need it when you want to turn design mockups into real websites without manually coding every detail.
+    </AccordionContent>
+  </AccordionItem>
+
+  <AccordionItem value="coding-knowledge">
+    <AccordionTrigger>Do I need to know how to code to use Figma integration?</AccordionTrigger>
+    <AccordionContent>
+      No! That's the beauty of it. Simply copy a link to your Figma design (or a specific section), paste it into YouWare, and the AI generates the code for you automatically.
+    </AccordionContent>
+  </AccordionItem>
+
+  <AccordionItem value="access-token">
+    <AccordionTrigger>How do I get a Figma Personal Access Token?</AccordionTrigger>
+    <AccordionContent>
+      <ol className="list-decimal list-inside space-y-2">
+        <li>Click your avatar in Figma and select <strong>Settings</strong></li>
+        <li>Go to the <strong>Security</strong> tab</li>
+        <li>Scroll to <strong>Personal access tokens</strong> and click <strong>Generate new token</strong></li>
+        <li>Name it (e.g., "YouWare MCP"), set expiration (90 days recommended)</li>
+        <li>Enable these scopes: <code>file_content:read</code>, <code>file_dev_resources:read</code>, <code>projects:read</code></li>
+        <li>Copy the token immediately (you won't see it again!)</li>
+      </ol>
+    </AccordionContent>
+  </AccordionItem>
+
+  <AccordionItem value="permissions">
+    <AccordionTrigger>What Figma permissions (scopes) do I need to enable?</AccordionTrigger>
+    <AccordionContent>
+      You need to enable three key scopes:
+      <ul className="list-disc list-inside mt-2 space-y-1">
+        <li><code>file_content:read</code> - Allows reading design content</li>
+        <li><code>file_dev_resources:read</code> - Allows reading development resources</li>
+        <li><code>projects:read</code> - Allows reading project structure</li>
+      </ul>
+    </AccordionContent>
+  </AccordionItem>
+
+  <AccordionItem value="conversion-strategy">
+    <AccordionTrigger>Should I convert my entire Figma page at once or section by section?</AccordionTrigger>
+    <AccordionContent>
+      <strong>We strongly recommend converting section by section</strong> for best results. This approach gives you:
+      <ul className="list-disc list-inside mt-2 space-y-1">
+        <li>Higher accuracy and precision</li>
+        <li>Better code structure</li>
+        <li>Easier debugging and adjustments</li>
+        <li>Faster iterations on specific sections</li>
+      </ul>
+    </AccordionContent>
+  </AccordionItem>
+
+  <AccordionItem value="copy-link">
+    <AccordionTrigger>How do I copy a link to a specific Figma section?</AccordionTrigger>
+    <AccordionContent>
+      In Figma, select the frame or section you want to convert, right-click, and choose "Copy link to selection." Then paste that link into YouWare.
+    </AccordionContent>
+  </AccordionItem>
+
+  <AccordionItem value="pixel-perfect">
+    <AccordionTrigger>Will the generated code match my Figma design exactly?</AccordionTrigger>
+    <AccordionContent>
+      Yes! YouWare's AI is designed to generate pixel-perfect code that matches your Figma design's typography, spacing, colors, and layout. For best results, convert section by section.
+    </AccordionContent>
+  </AccordionItem>
+
+  <AccordionItem value="responsive-design">
+    <AccordionTrigger>Can I use Figma integration with responsive designs?</AccordionTrigger>
+    <AccordionContent>
+      Absolutely! The AI recognizes responsive design patterns in your Figma file and generates responsive CSS code that adapts to different screen sizes.
+    </AccordionContent>
+  </AccordionItem>
+
+  <AccordionItem value="design-updates">
+    <AccordionTrigger>What if I update my Figma design after generating code?</AccordionTrigger>
+    <AccordionContent>
+      Simply copy the link to the updated section and regenerate that part. The AI will create fresh code based on your latest design.
+    </AccordionContent>
+  </AccordionItem>
+
+  <AccordionItem value="community-files">
+    <AccordionTrigger>Can I use Figma Community files and templates?</AccordionTrigger>
+    <AccordionContent>
+      Yes! You can use any Figma file you have access to, including Community templates. Just make sure you've duplicated them to your own workspace first.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>

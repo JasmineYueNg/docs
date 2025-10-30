@@ -1,0 +1,352 @@
+---
+title: "YouWare MCP Tools Introduction - Connect Your Project to Any Service"
+description: "Learn how to integrate external services like ChatGPT, Figma, Notion, and more into your YouWare project with MCP Tools. Simple setup, powerful connections."
+canonical: "https://docs.youware.com/feature/introduction"
+---
+
+import { FileText, Zap, Puzzle, Rocket, Globe, Image, Database, Palette, Map, BookOpen, Shield, Users, Settings } from 'lucide-react'
+
+<div className="flex items-center gap-3 mb-6">
+  <div className="p-2 bg-blue-100 rounded-lg">
+    <Puzzle className="w-6 h-6 text-blue-600" />
+  </div>
+  <div>
+    <h1 className="text-3xl font-bold text-gray-900">MCP Tools Introduction</h1>
+    <p className="text-gray-600 mt-1">Connect your project to the services you love</p>
+  </div>
+</div>
+
+<img src="/images/mcp-tools-demo.gif" alt="YouWare MCP Tools demonstration showing integration workflow" className="rounded-lg border shadow-sm mb-8" />
+
+## Why Integrations Matter
+
+<div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 mb-6 border border-blue-100">
+  <div className="flex items-start gap-4">
+    <div className="p-2 bg-blue-500 rounded-lg">
+      <Zap className="w-5 h-5 text-white" />
+    </div>
+    <div>
+      <p className="text-gray-700 leading-relaxed">
+        Remember when smartphones were just for calls? Then apps came along and changed everything. <strong>That's exactly what MCP Tools do for your YouWare project.</strong>
+      </p>
+    </div>
+  </div>
+</div>
+
+MCP Tools are like apps for your website. Install one, and suddenly your project can connect with the services you already love—ChatGPT, Figma, Notion, and dozens more. Think of them as smart adapters that help your site plug into the tools you rely on every day, so everything works together instead of living in separate silos.
+
+### What becomes possible?
+
+If you've ever wished your YouWare project could:
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+  <div className="flex items-center gap-3 p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+    <FileText className="w-5 h-5 text-blue-500 flex-shrink-0" />
+    <span className="text-gray-700"><strong>Pull in your latest Notion pages</strong> automatically</span>
+  </div>
+  
+  <div className="flex items-center gap-3 p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+    <Zap className="w-5 h-5 text-green-500 flex-shrink-0" />
+    <span className="text-gray-700"><strong>Switch between multiple AI models</strong> to find the perfect fit</span>
+  </div>
+  
+  <div className="flex items-center gap-3 p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+    <Palette className="w-5 h-5 text-purple-500 flex-shrink-0" />
+    <span className="text-gray-700"><strong>Turn your Figma designs into live pages</strong> in seconds</span>
+  </div>
+  
+  <div className="flex items-center gap-3 p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+    <Users className="w-5 h-5 text-orange-500 flex-shrink-0" />
+    <span className="text-gray-700"><strong>Display real-time game leaderboards</strong> without breaking a sweat</span>
+  </div>
+</div>
+
+...then you're in the right place. YouWare MCP Tools make all of this possible with just a few clicks.
+
+## How do I add an integration to my project?
+
+<img src="/images/mcp-tools-panel.png" alt="MCP Tools panel interface in YouWare project creation screen" className="rounded-lg border shadow-sm mb-6" />
+
+### Step 1: Access the MCP Tool Panel
+
+<div className="flex items-start gap-3 p-4 bg-blue-50 rounded-lg mb-4 border border-blue-200">
+  <div className="p-1 bg-blue-500 rounded">
+    <Settings className="w-4 h-4 text-white" />
+  </div>
+  <div>
+    <p className="text-gray-700">
+      The <strong>MCP Tool</strong> entry point is located at the <strong>bottom left</strong> of the input box on the page creation screen. Click it to expand the list of available tools and integrations for your current project.
+    </p>
+  </div>
+</div>
+
+### Step 2: Add Your Integration
+
+You can add integrations by **combining natural language prompts with MCP Tool actions**:
+
+<div className="bg-gray-50 rounded-lg p-6 mb-6 border">
+  <h4 className="font-semibold text-gray-900 mb-4">How it works:</h4>
+  <div className="space-y-3">
+    <div className="flex items-center gap-3">
+      <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium">1</span>
+      <span className="text-gray-700"><strong>Describe your needs</strong> in the chat input using natural language</span>
+    </div>
+    <div className="flex items-center gap-3">
+      <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium">2</span>
+      <span className="text-gray-700"><strong>Select the corresponding tool</strong> from the MCP Tool panel</span>
+    </div>
+  </div>
+</div>
+
+**Examples:**
+
+<div className="space-y-4 mb-6">
+  <div className="border-l-4 border-green-400 bg-green-50 p-4 rounded-r-lg">
+    <div className="mb-2">
+      <strong className="text-green-800">Prompt:</strong> <span className="text-gray-700">"Create a cartoon image generator using nanobanana"</span>
+    </div>
+    <div>
+      <strong className="text-green-800">Action:</strong> <span className="text-gray-700">Click to enable the <strong>AI App</strong> tool in the MCP Tool panel</span>
+    </div>
+  </div>
+  
+  <div className="border-l-4 border-blue-400 bg-blue-50 p-4 rounded-r-lg">
+    <div className="mb-2">
+      <strong className="text-blue-800">Prompt:</strong> <span className="text-gray-700">"Add a backend voting system with a leaderboard"</span>
+    </div>
+    <div>
+      <strong className="text-blue-800">Action:</strong> <span className="text-gray-700">Click to enable the <strong>YouWare Backend</strong> tool in the MCP Tool panel</span>
+    </div>
+  </div>
+</div>
+
+### Step 3: Authorize & Configure (if needed)
+
+<div className="flex items-start gap-3 p-4 bg-amber-50 rounded-lg mb-4 border border-amber-200">
+  <div className="p-1 bg-amber-500 rounded">
+    <Shield className="w-4 h-4 text-white" />
+  </div>
+  <div>
+    <p className="text-gray-700 mb-3">
+      Some tools (such as <strong>Figma</strong> and <strong>database-related tools</strong>) require authorization and linking. Don't worry—these tools come with:
+    </p>
+    <ul className="text-gray-700 space-y-1">
+      <li>• Step-by-step configuration instructions</li>
+      <li>• Built-in examples</li>
+      <li>• Simple guidance to get you started quickly</li>
+    </ul>
+  </div>
+</div>
+
+### Step 4: Generate Your Project
+
+<div className="flex items-center gap-3 p-4 bg-green-50 rounded-lg border border-green-200">
+  <Rocket className="w-5 h-5 text-green-500" />
+  <span className="text-gray-700">Press <strong>Enter</strong> and wait for YouWare to create your project with the integrated tools ready to use.</span>
+</div>
+
+---
+
+## Finding Your Perfect Tool
+
+<div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-6 mb-6 border border-purple-100">
+  <div className="flex items-center gap-3 mb-4">
+    <div className="p-2 bg-purple-500 rounded-lg">
+      <Globe className="w-5 h-5 text-white" />
+    </div>
+    <h3 className="text-xl font-bold text-gray-900">Not sure where to start?</h3>
+  </div>
+  <p className="text-gray-600">Here's a quick guide to help you find the right tool for your needs:</p>
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div className="space-y-3">
+    <div className="flex items-center gap-3 p-3 bg-white rounded-lg border hover:border-blue-300 transition-colors">
+      <Globe className="w-4 h-4 text-blue-500 flex-shrink-0" />
+      <div className="text-sm">
+        <strong>Scrape & display web content</strong> → Use Web Scraper
+      </div>
+    </div>
+    
+    <div className="flex items-center gap-3 p-3 bg-white rounded-lg border hover:border-blue-300 transition-colors">
+      <Image className="w-4 h-4 text-green-500 flex-shrink-0" />
+      <div className="text-sm">
+        <strong>Generate images or videos</strong> → Try AI App
+      </div>
+    </div>
+    
+    <div className="flex items-center gap-3 p-3 bg-white rounded-lg border hover:border-blue-300 transition-colors">
+      <Palette className="w-4 h-4 text-purple-500 flex-shrink-0" />
+      <div className="text-sm">
+        <strong>Turn designs into code</strong> → Use Figma
+      </div>
+    </div>
+    
+    <div className="flex items-center gap-3 p-3 bg-white rounded-lg border hover:border-blue-300 transition-colors">
+      <Database className="w-4 h-4 text-orange-500 flex-shrink-0" />
+      <div className="text-sm">
+        <strong>Collect & manage data</strong> → Check out YouWare Backend or Supabase
+      </div>
+    </div>
+  </div>
+  
+  <div className="space-y-3">
+    <div className="flex items-center gap-3 p-3 bg-white rounded-lg border hover:border-blue-300 transition-colors">
+      <FileText className="w-4 h-4 text-blue-500 flex-shrink-0" />
+      <div className="text-sm">
+        <strong>Display dynamic content</strong> → Connect Notion, GitHub, or YouTube
+      </div>
+    </div>
+    
+    <div className="flex items-center gap-3 p-3 bg-white rounded-lg border hover:border-blue-300 transition-colors">
+      <Palette className="w-4 h-4 text-pink-500 flex-shrink-0" />
+      <div className="text-sm">
+        <strong>Add visual polish</strong> → Browse Icon Library, Animation Library, or Unsplash
+      </div>
+    </div>
+    
+    <div className="flex items-center gap-3 p-3 bg-white rounded-lg border hover:border-blue-300 transition-colors">
+      <Map className="w-4 h-4 text-red-500 flex-shrink-0" />
+      <div className="text-sm">
+        <strong>Embed interactive maps</strong> → Go with Google Maps
+      </div>
+    </div>
+    
+    <div className="flex items-center gap-3 p-3 bg-white rounded-lg border hover:border-blue-300 transition-colors">
+      <BookOpen className="w-4 h-4 text-indigo-500 flex-shrink-0" />
+      <div className="text-sm">
+        <strong>Access research papers</strong> → Integrate arXiv
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="text-center p-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white">
+  <h3 className="text-xl font-bold mb-2">Welcome to the YouWare Way</h3>
+  <p className="text-blue-100">Where your ideas become reality faster than you thought possible.</p>
+</div>
+
+---
+
+## Frequently Asked Questions
+
+<div className="space-y-4">
+  <details className="group">
+    <summary className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 cursor-pointer hover:border-blue-300 transition-colors">
+      <div className="flex items-center gap-3">
+        <Puzzle className="w-4 h-4 text-blue-500" />
+        <span className="font-medium text-gray-900">What are MCP Tools?</span>
+      </div>
+      <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+      </svg>
+    </summary>
+    <div className="p-4 pt-0">
+      <p className="text-gray-700 leading-relaxed">
+        MCP Tools (Model Context Protocol Tools) are pre-built integrations that extend your YouWare project's capabilities. They work like plugins or apps, allowing your website to connect with external services like AI models, databases, design tools, and content platforms—all without writing complex code.
+      </p>
+    </div>
+  </details>
+
+  <details className="group">
+    <summary className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 cursor-pointer hover:border-blue-300 transition-colors">
+      <div className="flex items-center gap-3">
+        <Users className="w-4 h-4 text-green-500" />
+        <span className="font-medium text-gray-900">Do I need coding experience to use integrations?</span>
+      </div>
+      <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+      </svg>
+    </summary>
+    <div className="p-4 pt-0">
+      <p className="text-gray-700 leading-relaxed">
+        Not at all! That's the beauty of YouWare integrations. Simply select the tool you need, describe what you want in plain English, and YouWare handles all the technical implementation. Whether you're integrating AI image generation or connecting to your Notion workspace, it's all done through our intuitive interface.
+      </p>
+    </div>
+  </details>
+
+  <details className="group">
+    <summary className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 cursor-pointer hover:border-blue-300 transition-colors">
+      <div className="flex items-center gap-3">
+        <Zap className="w-4 h-4 text-purple-500" />
+        <span className="font-medium text-gray-900">Can I use multiple integrations in one project?</span>
+      </div>
+      <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+      </svg>
+    </summary>
+    <div className="p-4 pt-0">
+      <p className="text-gray-700 leading-relaxed">
+        Absolutely! In fact, we encourage it. You can combine multiple MCP Tools to create powerful, feature-rich applications. For example, you might use Figma to import your design, AI App to generate content, Supabase to manage your database, and Unsplash for images—all in the same project.
+      </p>
+    </div>
+  </details>
+
+  <details className="group">
+    <summary className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 cursor-pointer hover:border-blue-300 transition-colors">
+      <div className="flex items-center gap-3">
+        <Database className="w-4 h-4 text-orange-500" />
+        <span className="font-medium text-gray-900">What's the difference between YouWare Backend and Supabase?</span>
+      </div>
+      <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+      </svg>
+    </summary>
+    <div className="p-4 pt-0">
+      <p className="text-gray-700 leading-relaxed">
+        <strong>YouWare Backend</strong> is our built-in data management solution—perfect for simple data storage and retrieval with zero configuration. <strong>Supabase</strong> is a more robust, full-featured database platform ideal for complex applications that need advanced querying, real-time updates, or authentication features. Choose based on your project's complexity.
+      </p>
+    </div>
+  </details>
+
+  <details className="group">
+    <summary className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 cursor-pointer hover:border-blue-300 transition-colors">
+      <div className="flex items-center gap-3">
+        <Shield className="w-4 h-4 text-red-500" />
+        <span className="font-medium text-gray-900">Are my API keys and data secure?</span>
+      </div>
+      <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+      </svg>
+    </summary>
+    <div className="p-4 pt-0">
+      <p className="text-gray-700 leading-relaxed">
+        Yes. YouWare uses industry-standard encryption to protect all credentials and data. Your API keys are stored securely and never exposed in your code. We follow best practices for data privacy and security, and you maintain full control over your integrations at all times.
+      </p>
+    </div>
+  </details>
+
+  <details className="group">
+    <summary className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 cursor-pointer hover:border-blue-300 transition-colors">
+      <div className="flex items-center gap-3">
+        <Settings className="w-4 h-4 text-gray-500" />
+        <span className="font-medium text-gray-900">Can I remove an integration later?</span>
+      </div>
+      <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+      </svg>
+    </summary>
+    <div className="p-4 pt-0">
+      <p className="text-gray-700 leading-relaxed">
+        Of course! You can add or remove integrations anytime without affecting your project's core functionality. If you remove an integration, any features that depend on it will stop working, but your other features remain intact. You can always re-add it later if needed.
+      </p>
+    </div>
+  </details>
+
+  <details className="group">
+    <summary className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 cursor-pointer hover:border-blue-300 transition-colors">
+      <div className="flex items-center gap-3">
+        <Globe className="w-4 h-4 text-indigo-500" />
+        <span className="font-medium text-gray-900">What if the integration I need isn't available?</span>
+      </div>
+      <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+      </svg>
+    </summary>
+    <div className="p-4 pt-0">
+      <p className="text-gray-700 leading-relaxed">
+        We're constantly adding new MCP Tools based on user feedback. If you need a specific integration, let us know through our feedback form or community forum. In the meantime, you can often use the <strong>Web Scraper</strong> or <strong>API integration</strong> tools to connect with custom services.
+      </p>
+    </div>
+  </details>
+</div>
