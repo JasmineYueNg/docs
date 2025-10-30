@@ -9,7 +9,7 @@
   "appearance": {
     "disableDarkMode": true
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "logo": "/logo/youware-logo.svg",
   "topbarCta": {
     "name": "YouWare",
