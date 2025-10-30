@@ -11,6 +11,11 @@
   },
   "favicon": "/favicon.svg",
   "logo": "/logo/youware-logo.svg",
+  "topbarCta": {
+    "name": "YouWare",
+    "type": "link",
+    "url": "https://youware.com"
+  },
   "navigation": {
     "tabs": [
       {
