@@ -44,8 +44,15 @@
         ]
       },
       {
-        "tab": "Guides",
-        "groups": []
+        "tab": "Connections",
+        "groups": [
+          {
+            "group": "MCP & Integrations",
+            "pages": [
+              "connections/mcp-introduction"
+            ]
+          }
+        ]
       }
     ]
   }
