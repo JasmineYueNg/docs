@@ -10,6 +10,7 @@
     "disableDarkMode": true
   },
   "favicon": "/favicon.svg",
+  "logo": "/logo/youware-logo.svg",
   "navigation": {
     "tabs": [
       {
