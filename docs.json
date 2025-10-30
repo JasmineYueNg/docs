@@ -3,8 +3,8 @@
   "name": "YouWare Docs",
   "theme": "mint",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983"
+    "primary": "#55644A",
+    "light": "#AAB39A"
   },
   "appearance": {
     "disableDarkMode": true
