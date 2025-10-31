@@ -46,7 +46,9 @@
               "features/multi-model-switching",
               "features/remix",
               "features/share",
-              "features/upload-code"
+              "features/upload-code",
+              "features/visual-editing",
+              "features/youware-backend"
             ]
           }
         ]
@@ -55,12 +57,35 @@
         "tab": "Connections",
         "groups": [
           {
-            "group": "Integrations",
+            "group": "MCP",
             "pages": [
-              "connections/mcp-introduction",
+              "connections/mcp-introduction"
+            ]
+          },
+          {
+            "group": "AI API",
+            "pages": [
               "connections/ai-app-integration",
+              "connections/ai-api-models"
+            ]
+          },
+          {
+            "group": "Highly Recommend",
+            "pages": [
               "connections/figma-integration",
               "connections/youware-backend-integration"
+            ]
+          },
+          {
+            "group": "Other Integrations",
+            "pages": [
+              "connections/github-integration",
+              "connections/supabase-integration",
+              "connections/notion-integration",
+              "connections/animation-library",
+              "connections/icon-library",
+              "connections/image-generator",
+              "connections/web-scraper"
             ]
           }
         ]

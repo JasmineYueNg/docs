@@ -1,0 +1,180 @@
+---
+title: "YouWare Backend - Quick Start Guide"
+description: "Get started with YouWare Backend in 3 simple steps. Learn how to add database, deploy functions, and manage your backend projects with natural language commands."
+canonical: "https://docs.youware.com/features/youware-backend"
+---
+
+<Info>
+**New to YouWare Backend?** Learn about the [complete backend infrastructure and real-world use cases](/connections/youware-backend-integration) before diving into this quick start guide.
+</Info>
+
+YouWare Backend transforms static web pages into dynamic applications with persistent data storage, automated functions, and real user authentication - all without writing backend code.
+
+This guide shows you how to get started in minutes.
+
+## Get Started in 3 Steps
+
+<Steps>
+<Step title="Add YouWare Backend MCP">
+  <Frame>
+    <img src="/images/youware-backend-add-mcp.gif" alt="Adding YouWare Backend MCP from the marketplace" />
+  </Frame>
+
+  Open your YouWare project:
+
+  1. Click on the **MCP icon** on the left sidebar
+  2. Find **YouWare Backend** in the Marketplace
+  3. Click on the checkbox
+
+  <Check>
+  You're all set! Now you can start building with backend capabilities.
+  </Check>
+</Step>
+
+<Step title="Create Database">
+  <video controls width="100%">
+    <source src="/images/youware-backend-create-database.mp4" type="video/mp4" />
+  </video>
+
+  In the dialog box, type: **"Create a voting database with: option name, number of votes, voter ID."**
+
+  The data table is created and you will see the field structure:
+  - `option_name` (TEXT)
+  - `vote_count` (INTEGER)
+  - `voter_id` (TEXT)
+</Step>
+
+<Step title="Deploy a Backend Function">
+  <video controls width="100%">
+    <source src="/images/youware-backend-deploy-function.mp4" type="video/mp4" />
+  </video>
+
+  In the dialog box, type: **"deploy a function that automatically calculates the percentage and updates the page after each vote"**
+
+  <Check>
+  Your backend is live! Each time a user votes, the function will automatically calculate the result and update it in real time.
+  </Check>
+</Step>
+</Steps>
+
+## Manipulate Databases in Natural Language
+
+Once you've created your data table, it's straightforward to tell the AI what you want to do:
+
+- **Add data:** "add three options: apple, banana, orange, the initial votes are all 0"
+- **Query data:** "display all the current options and the number of votes"
+- **Modify data:** "Increase the number of votes for 'apple' by 1"
+- **Delete data:** "delete the option with 0 votes"
+- **Modify the table structure:** "add a 'Voting Time' field to the voting table"
+
+<Tip>
+**Want to see real examples?** Check out the [real-world use cases](/connections/youware-backend-integration#real-world-use-cases) including polls, leaderboards, quiz platforms, and social features.
+</Tip>
+
+## Data Management
+
+### View Project Usage
+
+<Frame>
+  <img src="/images/youware-backend-project-usage.png" alt="Backend usage interface showing project status and quota" />
+</Frame>
+
+1. Click on **the user's avatar** in the upper right corner
+2. Select **Backend** (shows used/total, e.g. `2/5`)
+3. Go to Backend Usage popup
+
+**In the popup you can:**
+
+- View the status of all backend projects (in service/cooling off)
+- Pause or restart the project
+- Download project data
+
+### Pause and Restart Projects
+
+<Frame>
+  <img src="/images/youware-backend-pause-restart.png" alt="Pause and restart project controls in Backend Usage" />
+</Frame>
+
+**Pause the project:**
+
+1. Find the target project in Backend Usage
+2. Click the **Pause** button
+3. Confirm the prompt (data is retained for 7 days)
+
+The backend stops immediately and the frontend stays online.
+
+**Restart the project:**
+
+1. Find the project in Backend Usage that is in cooling off period
+2. Click the **Run** button
+3. Resume immediately if there is enough credit in the package
+
+### Download Project Data
+
+**Three ways:**
+
+1. **Backend Usage popup:** Click the avatar in the upper right corner to enter the backend view, click export
+2. **Project page:**
+   - Expand the drop-down bar in the upper left corner → Download → select type (ALL / Code / Data)
+   - Switch to the database view → click the download button
+3. **Dialog box:** type "download data" and click the button prompted by AI
+
+## Data Retention Policy
+
+<Warning>
+**Important:** Understanding data retention helps you avoid data loss.
+</Warning>
+
+**Data retention timeline:**
+
+- Backend **stops working immediately** after suspension of service or expiration of subscription
+- Data **is retained for 7 days**, during which time it can be restarted or downloaded
+- **After 7 days it is permanently deleted and cannot be recovered**
+
+**System reminders:**
+
+The system will remind you via email and inbox message (on the day of expiration, the 3rd day, the 6th day) to ensure timely download of data.
+
+<Info>
+Your website continues to be online and all front-end code remains intact. Only the back-end functionality stops working.
+</Info>
+
+## Privacy & Security
+
+Projects using YouWare Backend **are automatically blocked from being remixed by others**:
+
+- Frontend code can be remixed (for learning purposes)
+- Backend functions and databases are completely private
+- No one else can access your data
+
+Your data is safe and secure.
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Learn More About Backend" icon="book" href="/connections/youware-backend-integration">
+    Explore detailed concepts, architecture comparisons, and comprehensive real-world use cases.
+  </Card>
+  <Card title="View All FAQ" icon="circle-question" href="/connections/youware-backend-integration#frequently-asked-questions">
+    Get answers to common questions about security, pricing, data management, and more.
+  </Card>
+</CardGroup>
+
+## Quick Tips
+
+<AccordionGroup>
+<Accordion title="How do I check my project status?">
+  Click your avatar in the upper right corner → Backend. The status shows either **in service** (green) or **cooling off period (X days)** (orange).
+</Accordion>
+
+<Accordion title="Can backend functions call external APIs?">
+  Yes! Private keys (e.g. LLM API Key) are securely stored in the backend, so frontend code won't expose them. You can safely integrate third-party services.
+</Accordion>
+
+<Accordion title="What are the three ways to download data?">
+  1. **Backend Usage popup:** Avatar → Backend → Export
+  2. **Project page:** Upper left dropdown → Download → select Data
+  3. **Dialog box:** Type "download data" and follow AI prompts
+</Accordion>
+</AccordionGroup>
+

@@ -1,7 +1,7 @@
 ---
 title: "YouWare MCP Tools Introduction"
 description: "Learn how to integrate external services like ChatGPT, Figma, Notion, and more into your YouWare project with MCP Tools. Simple setup, powerful connections."
-canonical: "https://docs.youware.com/feature/introduction"
+canonical: "https://docs.youware.com/connections/mcp-introduction"
 ---
 
 # Connect Your Project to Any Service
@@ -97,6 +97,10 @@ Action: Click to enable the YouWare Backend tool in the MCP Tool panel
   Press **Enter** and wait for YouWare to create your project with the integrated tools ready to use.
 </Tip>
 
+<Warning>
+  **Performance Tip:** The more MCP Tools you enable, the slower your project generation will be. Each tool adds processing time as the AI needs to coordinate multiple services. For optimal performance, only enable the tools you actually need for your project. You can always add more tools later!
+</Warning>
+
 ---
 
 ## Finding Your Perfect Tool
@@ -149,6 +153,8 @@ Action: Click to enable the YouWare Backend tool in the MCP Tool panel
   </Accordion>
   <Accordion title="Can I use multiple integrations in one project?" icon="zap">
     Absolutely! In fact, we encourage it. You can combine multiple MCP Tools to create powerful, feature-rich applications. For example, you might use Figma to import your design, AI App to generate content, Supabase to manage your database, and Unsplash for images—all in the same project.
+
+    **Keep in mind:** The more tools you enable, the longer it takes to generate your project. Each additional tool requires more processing as the AI coordinates between services. For best performance, start with essential tools and add more as needed.
   </Accordion>
   <Accordion title="What's the difference between YouWare Backend and Supabase?" icon="database">
     **YouWare Backend** is our built-in data management solution—perfect for simple data storage and retrieval with zero configuration. **Supabase** is a more robust, full-featured database platform ideal for complex applications that need advanced querying, real-time updates, or authentication features. Choose based on your project's complexity.

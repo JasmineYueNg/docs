@@ -1,0 +1,128 @@
+---
+title: "Notion Integration"
+description: "Connect Notion pages to LLMs for content-driven web project generation. Use your Notion workspace as a CMS for YouWare projects."
+canonical: "https://docs.youware.com/connections/notion-integration"
+---
+
+<Frame>
+<img src="/images/notion-integration-overview.png" alt="Notion integration overview showing connection workflow" />
+</Frame>
+
+## What is the Notion Tool?
+
+The Notion tool turns your Notion workspace into a powerful content management system (CMS) for your YouWare projects. Instead of copying and pasting, you can connect your Notion pages directly. The AI can then read these pages—which might contain product specifications, blog drafts, or marketing copy—and use them as the primary content source to generate a fully styled and functional website or application.
+
+<Info>
+**Quick Summary:**
+- **Purpose**: Uses Notion pages as a structured, content-driven input for AI generation
+- **Function**: The AI reads the content, structure, and hierarchy of your Notion pages
+- **Benefit**: Generate websites and apps where the content is always managed and updated directly in Notion
+- **Workflow**: Perfect for teams that use Notion as their source of truth for all content
+</Info>
+
+## Key Benefits
+
+<CardGroup cols={3}>
+<Card title="Content-First Development" icon="pen-to-square">
+Build your app's structure and content simultaneously, with Notion as the central hub for all text and data.
+</Card>
+
+<Card title="Simplified Updates" icon="rotate">
+Update your website content simply by editing the corresponding Notion page—no code changes required.
+</Card>
+
+<Card title="AI Context" icon="brain">
+Provides the AI with rich, well-organized content, resulting in more coherent and contextually relevant generated projects.
+</Card>
+</CardGroup>
+
+## How to Get Your Notion Integration Secret for MCP
+
+To connect Notion, you need to create an Internal Integration and get its secret token. This allows YouWare's MCP to access your selected pages via the Notion API.
+
+<Steps>
+<Step title="Set Up Integration in Notion">
+Go to the [Notion Integrations page](https://www.notion.so/my-integrations) and click **+ New Integration**.
+
+Configure the following settings:
+- **Name**: Give it a name like `YouWare MCP`
+- **Workspace**: Select the workspace you want to connect
+- **Type**: Choose **Internal Integration**
+</Step>
+
+<Step title="Copy Integration Secret">
+On the settings page for your new YouWare MCP integration, find the **Internal Integration Secret** and click the **Copy** button. This is the secret key you will use in YouWare.
+
+<Warning>
+Keep this secret secure. It provides access to your Notion content and should never be shared publicly.
+</Warning>
+</Step>
+
+<Step title="Connect Content to Integration">
+For YouWare to access a specific page or database, you must explicitly connect it to your new integration.
+
+1. Go to the Notion page or database you want to use
+2. Click the three dots (**...**) menu in the top right
+3. Select **Add connections** (or **Add people, emails, groups, or integrations**)
+4. Search for and select your **YouWare MCP** integration
+
+<Check>
+Once connected, YouWare can now access this page or database through the Notion API.
+</Check>
+</Step>
+
+<Step title="Optional: Configure Integration Permissions">
+By default, the integration has full read/write access. For security, you can go to the integration settings and configure fine-tuned permission scopes (e.g., only "Read content" access) to limit what the LLM can do with your data.
+
+<Tip>
+We recommend granting read-only access for most content-generation use cases.
+</Tip>
+</Step>
+</Steps>
+
+## Real-World Use Cases
+
+<Tabs>
+<Tab title="Pro Creator">
+**Launching a content-driven blog with zero code**
+
+You want a professional blog where you can write and publish new articles just by creating a new page in a Notion database.
+
+**How It Helps:**
+YouWare's AI generates the entire blog website, and the Notion integration acts as the CMS. You simply write in Notion, and the site updates automatically. This is content-first development that lets you focus 100% on your writing.
+</Tab>
+
+<Tab title="Small Business">
+**Creating a dynamic product catalog from internal specs**
+
+Your team keeps all product descriptions, features, and pricing in a Notion database and needs to generate a beautiful, searchable public product catalog.
+
+**How It Helps:**
+The AI reads the structured data from your Notion database and generates a dynamic, searchable website. Any changes to pricing or features in Notion are instantly reflected on the live site, ensuring data integrity and consistency across your business.
+</Tab>
+</Tabs>
+
+## FAQ
+
+<AccordionGroup>
+<Accordion title="Can I connect multiple Notion pages to one project?">
+Yes, you can connect multiple pages and databases. The AI will read all connected content to understand your project's full context.
+</Accordion>
+
+<Accordion title="Will the AI modify my Notion content?">
+By default, the integration can have write access, but we recommend configuring it for read-only access to prevent unintended modifications. The AI primarily uses Notion as a content source.
+</Accordion>
+
+<Accordion title="How often does the AI sync with Notion?">
+The AI reads from Notion in real-time when generating or updating your project, ensuring it always uses your latest content.
+</Accordion>
+
+<Accordion title="Can I use Notion databases as data sources?">
+Absolutely. Notion databases are ideal for structured content like product catalogs, blog posts, team directories, and more. The AI can read the database structure and generate appropriate interfaces.
+</Accordion>
+
+<Accordion title="What happens if I revoke the integration?">
+If you disconnect or delete the integration, YouWare will no longer be able to access your Notion content. Any previously generated code will continue to work, but updates requiring Notion data will fail.
+</Accordion>
+</AccordionGroup>
+
