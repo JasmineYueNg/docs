@@ -37,17 +37,17 @@
           {
             "group": "Core Features",
             "pages": [
+              "features/mobile",
+              "features/upload-code",
+              "features/multi-model-switching",
+              "features/remix",
               "features/boost",
+              "features/visual-editing",
+              "features/mcp-market",
               "features/code-view",
               "features/creator-studio",
               "features/ide-plugin",
-              "features/mcp-market",
-              "features/mobile",
-              "features/multi-model-switching",
-              "features/remix",
               "features/share",
-              "features/upload-code",
-              "features/visual-editing",
               "features/youware-backend"
             ]
           }

@@ -9,14 +9,14 @@ lastUpdated: "2024-10-29"
 
 Welcome to YouWare! We've built YouWare to be the fastest, most intuitive way to build and deploy web applications. This comprehensive FAQ covers everything from core features to advanced development workflows.
 
-## 🚀 Getting Started: Your First Project
+## Getting Started: Your First Project
 
 <AccordionGroup>
   <Accordion title="I'm a complete beginner. Where should I start after logging into YouWare?">
     We recommend heading straight to the "Create" button. You have two main paths:
 
     1. **Start with a simple prompt**: Describe your idea in natural language to the AI and watch it come to life.
-    2. **Use a Professional Template**: Select from our pre-built project templates to kickstart instantly.
+    2. **Use a Template**: Browse curated project templates and community recommendations to kickstart instantly.
 
     Our template library is constantly expanding! Need inspiration? Check out the "Explore" page to see what other creators are building and trending projects.
   </Accordion>
@@ -61,7 +61,7 @@ Welcome to YouWare! We've built YouWare to be the fastest, most intuitive way to
   </Accordion>
 </AccordionGroup>
 
-## 💻 Core Development & Features
+## Core Development & Features
 
 <AccordionGroup>
   <Accordion title="How do I edit content (text, images, components) in my project?">
@@ -144,7 +144,7 @@ Welcome to YouWare! We've built YouWare to be the fastest, most intuitive way to
   </Accordion>
 </AccordionGroup>
 
-## ⚡ Advanced Workflow & Troubleshooting
+## Advanced Workflow & Troubleshooting
 
 <AccordionGroup>
   <Accordion title="How do I write effective prompts to get the best results?">
@@ -181,7 +181,408 @@ Welcome to YouWare! We've built YouWare to be the fastest, most intuitive way to
   </Accordion>
 </AccordionGroup>
 
-## 👥 Account, Billing, and Community
+## Backend, Databases & Full-Stack Development
+
+<AccordionGroup>
+  <Accordion title="How do I build apps with databases and user authentication?">
+    **YouWare Backend** is your all-in-one solution for full-stack development. It provides:
+
+    - **Database**: Store and retrieve data (votes, scores, comments, user profiles)
+    - **User Authentication**: Real user login with YouWare accounts
+    - **Edge Functions**: Automated server-side logic (calculate rankings, send notifications)
+
+    **Example:** Create a voting app by describing: *"Create a voting app with a database storing poll options and vote counts. Deploy a function that automatically updates percentages after each vote."*
+
+    <Info>
+      Unlike other platforms that require piecing together multiple services, YouWare Backend is one unified, self-developed solution—database + auth + functions + storage all working together seamlessly.
+    </Info>
+  </Accordion>
+  <Accordion title="Can I use Supabase or other external databases?">
+    Yes! YouWare Backend is your default, but you can also connect **Supabase** by providing valid access keys and describing your data goals to the AI. The YouWare Backend approach requires zero configuration and works instantly—Supabase is available if you prefer external control.
+  </Accordion>
+  <Accordion title="What real-world projects can I build with YouWare Backend?">
+    <Tabs>
+      <Tab title="Voting Systems">
+        Build real-time polls where results update instantly. Store vote counts and voter IDs, automatically calculate percentages.
+      </Tab>
+      <Tab title="Leaderboards">
+        Create competitive scoreboards with automatic ranking calculations. Display real player names from user accounts.
+      </Tab>
+      <Tab title="Comment Threads">
+        Add comment sections with persistent storage. Show real user profiles instead of "Anonymous User."
+      </Tab>
+      <Tab title="Quiz Platforms">
+        Store quiz questions, user answers, and scores. Track progress across sessions.
+      </Tab>
+      <Tab title="User Profiles">
+        Member-only areas with personalized experiences. Store user preferences and history.
+      </Tab>
+    </Tabs>
+  </Accordion>
+  <Accordion title="How much does YouWare Backend cost?">
+    YouWare Backend uses your regular Credits. The cost depends on your usage:
+    - **Database reads/writes**: Small credit cost per operation
+    - **Function executions**: Credits deducted when functions run
+    - **Storage**: If you store files or large datasets
+
+    You get a generous free tier to start building before any costs apply.
+  </Accordion>
+</AccordionGroup>
+
+## Integrations & External Services
+
+<AccordionGroup>
+  <Accordion title="What are MCP Tools and how do I use them?">
+    **MCP Tools** are like apps for your website. Install one, and your project connects to services you already use—ChatGPT, Figma, Notion, GitHub, and more.
+
+    **To add an integration:**
+    1. Click the **MCP icon** in the sidebar
+    2. Browse available tools (YouWare Backend, AI API, Figma, Notion, etc.)
+    3. Enable the tools you want
+    4. Describe what you need in natural language
+
+    **Examples:**
+    - "Pull my latest Notion pages and display them here"
+    - "Convert my Figma design into a live webpage"
+    - "Connect to ChatGPT for real-time conversations"
+  </Accordion>
+  <Accordion title="How do I integrate AI models into my website (chatbots, image generators)?">
+    Use the **AI API** tool to give your website access to specialized AI services. This is different from the AI that builds your website—it enables your *finished website* to perform AI tasks for end users.
+
+    **What you can build:**
+    - Chatbots that answer questions in real-time
+    - Image generators for users to create custom artwork
+    - Sentiment analysis tools
+    - Video creation platforms
+    - Text summarization tools
+
+    **Key Benefits:**
+    - No API key management (we handle it securely)
+    - Simple pricing in YouWare Credits
+    - Access to models from OpenAI, Google, Anthropic, and more
+
+    <Warning>
+      The AI API is for your website to call AI models, not for building your website. Use YouWare's core AI to build the website structure, then use AI API to add smart functionality.
+    </Warning>
+  </Accordion>
+  <Accordion title="Can I connect my GitHub repository to YouWare?">
+    Yes! The **GitHub Integration** allows you to:
+    - Connect to your GitHub repository for version control
+    - Let the AI read your codebase to understand your coding style and project structure
+    - Generate code that perfectly matches your existing architecture
+    - Enable team collaboration with Pull Requests and Issues
+
+    **Setup:** Generate a GitHub Personal Access Token, add the integration, and the AI will have context about your entire codebase.
+  </Accordion>
+  <Accordion title="What happens if I integrate an external API without using YouWare's secure tools?">
+    <Warning>
+      **Security Risk**: API keys exposed in front-end code can be compromised.
+    </Warning>
+
+    **Best Practice**: Always use **YouWare Backend** to store API keys securely and make calls from the server side. This keeps sensitive credentials safe and prevents exposure in client-side code.
+  </Accordion>
+</AccordionGroup>
+
+## AI Models & Optimization
+
+<AccordionGroup>
+  <Accordion title="Which AI model should I use for my task?">
+    YouWare integrates **5 top AI models**. Here's how to choose:
+
+    | Task | Recommended Model | Why |
+    |------|------------------|-----|
+    | **Complex reasoning** | OpenAI O3 Pro | Deep thinking for hard problems |
+    | **General tasks** | OpenAI GPT-4o | Reliable, versatile workhorse |
+    | **Creative writing** | Claude Sonnet 4.5 | Excellent for copywriting and content |
+    | **Technical Q&A** | Gemini 2.5 Pro | Structured thinking for precision |
+    | **Budget-conscious** | DeepSeek V3 | Cost-effective all-rounder |
+    | **Speed matters** | Claude Haiku 3.5 | Ultra-fast, low-cost |
+
+    <Tip>
+      **Pro tip:** Switch models mid-project. Use a cheap, fast model for drafts, then switch to a powerful model for final quality checks.
+    </Tip>
+  </Accordion>
+  <Accordion title="How do I switch between AI models?">
+    <Steps>
+      <Step title="Open Model Selector">
+        Click the current model name (bottom-right of input box)
+      </Step>
+      <Step title="Review Options">
+        Hover over each model to see speed, cost, intelligence, and context window
+      </Step>
+      <Step title="Select & Confirm">
+        Click your choice and confirm. Switching takes ~3 seconds.
+      </Step>
+    </Steps>
+
+    Each model card shows:
+    - **Speed & Intelligence ratings** (5-panel comparison)
+    - **Cost tier** (Low, Standard, Max)
+    - **Context capacity** (token limits)
+    - **Feature support** (Web Search, MCP, Vision)
+  </Accordion>
+  <Accordion title="What's the difference between image generation models?">
+    | Model | Best For | Quality | Speed | Cost |
+    |-------|----------|---------|-------|------|
+    | **Midjourney** | Professional art, diverse styles | High | Medium | Standard |
+    | **GPT-Image-1** | Product visuals, polished designs | High | Medium | Standard |
+    | **Gemini Imagen 4** | Clear text rendering, consistency | High | Medium | Standard |
+    | **Flux AI** | Fast turnaround, basic needs | Standard | Fast | Low |
+
+    **Pro tip:** Use Flux for quick drafts, Midjourney for artistic work, GPT-Image-1 for product mockups.
+  </Accordion>
+</AccordionGroup>
+
+## Editing & Creation Tools
+
+<AccordionGroup>
+  <Accordion title="What's the fastest way to make small design changes?">
+    **Visual Editing** is perfect for rapid tweaks. Instead of describing changes to AI:
+
+    1. Click the **Edit** button
+    2. Click any element on screen
+    3. Adjust text, colors, spacing visually
+    4. Changes apply instantly
+
+    **Benefits:**
+    - Instant results (no waiting for AI)
+    - Minimal credit cost
+    - Pixel-perfect control
+
+    Use Visual Editing for style tweaks, then use AI Chat for major structural changes.
+  </Accordion>
+  <Accordion title="How does the Boost feature work?">
+    **Boost** automatically analyzes and optimizes your page with one click. The AI examines:
+
+    - **Page Structure**: Layout and visual hierarchy
+    - **Content Quality**: Text clarity and information flow
+    - **User Experience**: Interface and interactions
+
+    Then it enhances your page while preserving your original design intent. No prompts needed—it's fully automated.
+
+    <Tip>
+      Use Boost when your page feels rough but you're not sure what needs improvement.
+    </Tip>
+  </Accordion>
+  <Accordion title="Can I edit code directly in my project?">
+    **Yes!** Use **Code View** to:
+    - Browse your complete project structure (HTML, CSS, JavaScript, JSON, etc.)
+    - View code (all users)
+    - Edit and save instantly (subscribers only)
+    - See real-time updates in preview
+
+    **Pro tip:** Mix manual code edits with AI changes. The AI remembers your manual edits and considers them in future modifications.
+  </Accordion>
+  <Accordion title="What's the difference between remix and create?">
+    | | **Create** | **Remix** |
+    |---|-----------|----------|
+    | **Starting point** | Blank canvas or template | Existing public project |
+    | **Cost** | Full credits for new code | Lower credits (reuses structure) |
+    | **Use case** | Original ideas | Modify existing work |
+    | **Speed** | Longer (building from scratch) | Faster (changing existing design) |
+    | **Can download?** | Yes (Pro only) | No (protects original creator) |
+
+    **Pro tip:** Remix to learn from existing projects or to save credits on variations.
+  </Accordion>
+</AccordionGroup>
+
+## Cross-Platform & Sharing
+
+<AccordionGroup>
+  <Accordion title="Can I build projects on my phone?">
+    **Yes!** The **YouWare Mobile App** lets you:
+    - Create new projects with voice or text prompts
+    - Edit code and design (Code View + Visual Editing)
+    - Get push notifications when tasks complete
+    - Sync seamlessly with desktop
+
+    **Download:** Search "YouWare" in App Store (iOS) or Google Play (Android)
+
+    **Key features:**
+    - Voice input for hands-free creation
+    - Background task notifications
+    - Real-time cross-device sync
+  </Accordion>
+  <Accordion title="How do I share and publish my project?">
+    <Steps>
+      <Step title="Click Publish">
+        Click the **Publish** button in top-right corner
+      </Step>
+      <Step title="Get Share Link">
+        Click **Share** to generate a shareable link
+      </Step>
+      <Step title="Control Access">
+        Optional: Make private (add password) or disable remix
+      </Step>
+    </Steps>
+
+    **Share modes:**
+    - **Standard link**: Shows project + YouWare header + description
+    - **Fullscreen link**: Shows only your project (for demos, embedding, portfolios)
+
+    **Privacy options:**
+    - **Public**: Anyone with link can access and remix
+    - **Private**: Requires password to view
+    - **No remix**: Others can view but not copy
+  </Accordion>
+  <Accordion title="Can others remix my project after I share it?">
+    **By default, yes.** Others can:
+    - Create a complete independent copy
+    - Modify it with natural language prompts
+    - Publish their own remixed version
+
+    **To prevent remixing:** Go to Share Settings and toggle **Remix Permissions: Off**. Your project becomes read-only.
+
+    **Note:** Code downloads are only allowed for projects created from scratch (non-Remix projects) and only for Pro subscribers.
+  </Accordion>
+</AccordionGroup>
+
+## Tech Stack & Developer Tools
+
+<AccordionGroup>
+  <Accordion title="What's the difference between React and HTML modes?">
+    YouWare supports **both React and HTML** project types. Here's how to choose:
+
+    | | **HTML Mode** | **React Mode** |
+    |---|---|---|
+    | **Best for** | Quick prototypes, static sites, landing pages | Complex apps, component reuse, state management |
+    | **Learning curve** | Simpler, more straightforward | More powerful, modern framework |
+    | **Switching** | Type `/html_mode` to switch to HTML | Type `/react_mode` to switch to React |
+    | **Upload** | Upload existing HTML/CSS/JS files | Upload React projects directly |
+    | **Performance** | Lightweight, fast for simple projects | Optimized for interactive apps |
+
+    **Pro tip:** Start with HTML for rapid prototyping, switch to React when you need advanced interactivity or component patterns.
+  </Accordion>
+  <Accordion title="Can I use YouWare with my IDE (VS Code, Cursor)?">
+    **Yes!** Official plugins are available for:
+    - **VS Code**
+    - **Cursor** (powered by Claude)
+
+    **What you can do:**
+    - Publish projects to YouWare directly from your editor
+    - Retrieve shareable project links instantly
+    - Access YouWare projects without leaving your IDE
+
+    This makes it seamless to integrate YouWare into professional development workflows.
+  </Accordion>
+  <Accordion title="What file formats can I upload to YouWare?">
+    **Code & Configuration:**
+    - `.html`, `.css`, `.js`, `.json`, `.xml`, `.yml` (YAML)
+    - React projects (complete folder structure)
+
+    **Documents:**
+    - `.doc`, `.docx`, `.ppt`, `.pptx`, `.txt`, `.epub`, `.csv`
+
+    **Media:**
+    - `.jpg`, `.png`, `.gif`, `.webp`
+    - `.mp3`, `.wav` (audio files)
+
+    **Upload limits:**
+    - Single file: Up to 100MB on creation page
+    - Total per project: 500MB storage included
+
+    <Tip>
+      For compressed files, unzip first and upload the complete folder structure.
+    </Tip>
+  </Accordion>
+</AccordionGroup>
+
+## Planning & Optimization Tools
+
+<AccordionGroup>
+  <Accordion title="What is Plan Mode and when should I use it?">
+    **Plan Mode** (`/plan`) is for organizing ideas *before* execution. It lets you:
+
+    1. **Outline your vision**: Describe what you want to build
+    2. **Organize steps**: Break complex projects into manageable phases
+    3. **Get structured planning**: The AI helps you think through your approach
+    4. **Then build**: Once your plan is solid, execute step by step
+
+    **Best uses:**
+    - Complex multi-step projects (e-commerce sites, dashboards)
+    - Team collaboration (align on approach before coding)
+    - Exploratory phases (brainstorm without committing to execution)
+
+    **Benefit:** Lightweight planning prevents wasted edits and keeps early brainstorming efficient.
+  </Accordion>
+  <Accordion title="Can I stop a generation or task that's running?">
+    **Yes!** The **Stop button** lets you:
+    - Interrupt ongoing generation immediately
+    - Save time and Credits
+    - Maintain full control of your workflow
+
+    Just click the **Stop** button during any active task. This is especially useful if you realize mid-generation that you want to change direction or if a task is taking longer than expected.
+  </Accordion>
+</AccordionGroup>
+
+## Creator Economy & Growth
+
+<AccordionGroup>
+  <Accordion title="How can I earn Credits by sharing projects?">
+    **Credit Rewards** let you earn through community participation:
+
+    - **Share Projects**: Earn Credits when others engage with your shared work
+    - **Invite Friends**: Receive Credits when people join YouWare through your referral
+    - **Community Engagement**: Participate in challenges and events for bonus Credits
+
+    Credits earned can be used immediately for:
+    - Generating new projects
+    - Running AI tasks
+    - Accessing premium features
+
+    <Tip>
+      Every share and invite builds your creator reputation while directly supporting your creative work.
+    </Tip>
+  </Accordion>
+  <Accordion title="What is the Affiliate Program and how do I join?">
+    The **Affiliate Program** lets creators earn by referring others to YouWare:
+
+    **How it works:**
+    - Share your unique referral link with your audience
+    - Earn rewards when people sign up through your link
+    - Track performance in the affiliate dashboard
+    - Access marketing materials and resources
+
+    **Who should join:**
+    - Content creators and influencers
+    - Developers and educators
+    - Community leaders
+    - Anyone with an engaged audience
+
+    Visit the Affiliate Program landing page for detailed information and signup.
+  </Accordion>
+  <Accordion title="What is Creator Studio and who should use it?">
+    **Creator Studio** is for creators who want to monetize and analyze their work:
+
+    **What you get:**
+    - **Performance Dashboard**: View engagement metrics for published projects
+    - **Revenue Tracking**: See income generated from your projects
+    - **Analytics**: Understand which projects perform best
+    - **Withdrawals**: Earn and withdraw revenue directly
+
+    **Who qualifies:**
+    - Creators publishing projects to the platform
+    - Users with publicly shared work
+    - Contributors to the YouWare ecosystem
+
+    **Access:** Reach out to support if you meet these criteria and want Creator Studio enabled on your account.
+  </Accordion>
+  <Accordion title="What's the Creator Badge and how do I get one?">
+    The **Creator Badge** shows on your profile and project pages. There are two types:
+
+    1. **Founding Creator**: For early YouWare community members who helped shape the platform
+    2. **Verified Creator**: Available as you build reputation and engagement
+
+    **Benefits:**
+    - Establishes credibility and recognition
+    - Increases visibility of your projects
+    - Shows community trust and participation
+
+    Badges are awarded based on your activity and contributions to the YouWare community.
+  </Accordion>
+</AccordionGroup>
+
+## Account, Billing, and Community
 
 <AccordionGroup>
   <Accordion title="What are the differences between the Free and Pro versions?">
@@ -191,7 +592,7 @@ Welcome to YouWare! We've built YouWare to be the fastest, most intuitive way to
 
     - Code Download (for professional workflow integration)
     - Larger Storage & Faster Processing
-    - Exclusive Professional Templates
+    - Exclusive Templates & Project Recommendations
     - Priority Technical Support
 
     You can decide to upgrade based on your usage frequency and need for advanced features.
