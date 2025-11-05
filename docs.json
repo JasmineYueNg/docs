@@ -42,6 +42,7 @@
               "features/upload-code",
               "features/multi-model-switching",
               "features/boost",
+              "features/tab-tab-completion",
               "features/visual-editing",
               "features/code-view",
               "features/mcp-market",
