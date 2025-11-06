@@ -35,21 +35,42 @@
         "tab": "Features",
         "groups": [
           {
-            "group": "Core Features",
+            "group": "Platform",
             "pages": [
               "features/mobile",
+              "features/ide-plugin"
+            ]
+          },
+          {
+            "group": "0-1 Creation",
+            "pages": [
               "features/remix",
               "features/upload-code",
               "features/multi-model-switching",
+              "features/tab-tab-completion"
+            ]
+          },
+          {
+            "group": "Editor",
+            "pages": [
               "features/boost",
-              "features/tab-tab-completion",
               "features/visual-editing",
               "features/code-view",
-              "features/mcp-market",
+              "features/history"
+            ]
+          },
+          {
+            "group": "Publishing & Management",
+            "pages": [
               "features/share",
-              "features/creator-studio",
-              "features/youware-backend",
-              "features/ide-plugin"
+              "features/creator-studio"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "features/mcp-market",
+              "features/youware-backend"
             ]
           }
         ]

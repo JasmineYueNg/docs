@@ -140,7 +140,7 @@ https://docs.youware.com
 - 图片放在 `/images/` 文件夹下，引用方式：
 
   ```
-  ![界面示例](/images/ai-app-interface.png)
+  ![界面示例](/images/ai-api-interface.png)
   
   ```
 - 不同页面尽量保持统一命名结构（英文小写、用中划线分词）
