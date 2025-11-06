@@ -90,6 +90,17 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Prompt Craft",
+        "groups": [
+          {
+            "group": "Prompt Craft",
+            "pages": [
+              "prompting/prompting"
+            ]
+          }
+        ]
       }
     ]
   }
