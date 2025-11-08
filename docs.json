@@ -100,15 +100,11 @@
             ]
           },
           {
-            "group": "Other Integrations",
+            "group": "Other Connections",
             "pages": [
               "connections/github-integration",
               "connections/supabase-integration",
-              "connections/notion-integration",
-              "connections/animation-library",
-              "connections/icon-library",
-              "connections/image-generator",
-              "connections/web-scraper"
+              "connections/notion-integration"
             ]
           }
         ]
