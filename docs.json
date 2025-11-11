@@ -97,8 +97,7 @@
             "group": "Highly Recommend",
             "pages": [
               "connections/figma-integration",
-              "connections/youware-backend-integration",
-              "connections/youtube-connection"
+              "connections/youware-backend-integration"
             ]
           },
           {
