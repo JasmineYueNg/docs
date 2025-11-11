@@ -1,5 +1,5 @@
 ---
-title: "Notion Integration"
+title: "Notion Connection"
 description: "Connect Notion pages to LLMs for content-driven web project generation. Use your Notion workspace as a CMS for YouWare projects."
 canonical: "https://docs.youware.com/connections/notion-integration"
 ---
@@ -36,12 +36,12 @@ Provides the AI with rich, well-organized content, resulting in more coherent an
 </Card>
 </CardGroup>
 
-## How to Get Your Notion Integration Secret for MCP
+## How to Get Your Notion Connection Secret for MCP
 
-To connect Notion, you need to create an Internal Integration and get its secret token. This allows YouWare's MCP to access your selected pages via the Notion API.
+To connect Notion, you’ll create an **Internal Integration** (Notion’s term) and capture its secret token. This lets YouWare's MCP access only the pages you explicitly share.
 
 <Steps>
-<Step title="Set Up Integration in Notion">
+<Step title="Set Up the Internal Integration in Notion">
 Go to the [Notion Integrations page](https://www.notion.so/my-integrations) and click **+ New Integration**.
 
 Configure the following settings:
@@ -58,8 +58,8 @@ Keep this secret secure. It provides access to your Notion content and should ne
 </Warning>
 </Step>
 
-<Step title="Connect Content to Integration">
-For YouWare to access a specific page or database, you must explicitly connect it to your new integration.
+<Step title="Connect Content to the Internal Integration">
+For YouWare to access a specific page or database, explicitly connect it to your new integration.
 
 1. Go to the Notion page or database you want to use
 2. Click the three dots (**...**) menu in the top right
