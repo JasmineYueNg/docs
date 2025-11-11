@@ -1,0 +1,150 @@
+---
+title: "arXiv Connection"
+description: "Transform arXiv papers into structured, AI-ready knowledge. Summarize breakthroughs, compare research directions, and launch content experiences fueled by the latest academic insights."
+canonical: "https://docs.youware.com/connections/arxiv-connection"
+---
+
+<Frame>
+  <img
+    src="/images/arxiv..png"
+    alt="arXiv connection overview showing research summaries and document cards"
+  />
+</Frame>
+
+<Info>
+**Bring cutting-edge research into YouWare without manual data wrangling.** Toggle on the arXiv connection and the builder can reference live paper metadata, abstracts, authors, citations, and PDF links—no scraping or API keys required.
+</Info>
+
+## Quick Summary
+
+- **Purpose:** Generate research hubs, analysis dashboards, and content pipelines powered by real arXiv papers  
+- **Pulls:** Titles, abstracts, categories, author lists, publication dates, citations, PDF links, and code repositories (when available)  
+- **Best for:** Research teams, technical bloggers, investor memos, education portals, conference landing pages
+
+---
+
+## What is the arXiv Connection?
+
+Mention any topic, category, author, or arXiv ID in your prompt—YouWare fetches the relevant papers and builds experiences around them. Summaries, comparison tables, citation callouts, and call-to-actions all use verified metadata direct from arXiv.
+
+<CardGroup cols={3}>
+  <Card title="Research Briefings" icon="file-text">
+    Surface the most cited or most recent papers with executive summaries and key metrics
+  </Card>
+  <Card title="Trend Dashboards" icon="bar-chart">
+    Visualize category heatmaps, publication momentum, and collaboration networks
+  </Card>
+  <Card title="Content Pipelines" icon="pen">
+    Feed newsletters, blog posts, or prompt libraries with AI-generated summaries and action items
+  </Card>
+</CardGroup>
+
+---
+
+## How It Works
+
+<Steps>
+  <Step title="Enable the connection">
+    Open **Connections → arXiv** in your workspace and toggle it on. No credentials or rate-limit configuration required.
+  </Step>
+  <Step title="Define the research scope">
+    In your prompt, specify topics, arXiv categories, authors, or timeframes. Example:  
+    _“Create a briefing on diffusion models published on arXiv in the last six months, highlighting breakthroughs and practical implications.”_
+  </Step>
+  <Step title="Review generated sections">
+    YouWare assembles paper cards, abstract highlights, comparison tables, and CTA buttons linking to full PDFs or code repos.
+  </Step>
+  <Step title="Regenerate for new papers">
+    When you need newer publications, re-run your prompt to fetch the latest data. Background auto-updates are not available yet.
+  </Step>
+</Steps>
+
+---
+
+## Prompt Example
+
+```text
+"Generate a research dashboard summarizing the top five arXiv papers on multimodal LLMs,
+including abstracts, author lists, publication dates, citations, key takeaways,
+and links to PDFs and GitHub repositories."
+```
+
+---
+
+## Example: AI Safety Research Briefing
+
+Run a prompt such as the one above and YouWare will:
+
+1. Query arXiv for papers matching your topic and timeframe.  
+2. Extract abstracts, methodologies, links, and author affiliations.  
+3. Produce analyst-ready summaries, comparison tables, and recommended follow-up reading.  
+4. Add shareable widgets—email signup, download bundles, or “Discuss with the team” CTAs.  
+
+Perfect for CTO updates, investor memos, academic newsletters, or student research portals.
+
+---
+
+## Best Practices
+
+- **Narrow the scope:** Include category tags (e.g., `cs.CL`, `cs.AI`) or keywords to keep results focused  
+- **Blend qualitative + quantitative:** Ask for metrics (citations, publication date) alongside commentary (“Why it matters”)  
+- **Call out actionable insights:** Request “Key takeaways”, “Implementation checklist”, or “Questions for stakeholders” sections  
+- **Pair with Backend:** Store curated reading lists, reviewer notes, or approval workflows using YouWare Backend  
+- **Automate newsletters manually:** Re-run the prompt on your preferred cadence to keep subscribers updated with the latest research
+
+---
+
+## Real-World Use Cases
+
+<Tabs>
+  <Tab title="Tech Leadership">
+    <Card title="CTO briefings" icon="briefcase">
+      Deliver weekly research digests highlighting risks, opportunities, and strategic recommendations.
+    </Card>
+  </Tab>
+  <Tab title="Media & Content">
+    <Card title="Research blogs" icon="edit">
+      Convert raw papers into digestible posts with summaries, quotes, and discussion prompts.
+    </Card>
+  </Tab>
+  <Tab title="Education & Academia">
+    <Card title="Course companions" icon="book-open">
+      Build curated reading lists, study guides, and quiz generators around the latest papers.
+    </Card>
+  </Tab>
+  <Tab title="Investment & Due Diligence">
+    <Card title="Market intelligence" icon="trending-up">
+      Track innovations across sectors, compare competing approaches, and annotate strategic signals.
+    </Card>
+  </Tab>
+</Tabs>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Do I need an arXiv API key?">
+    No. Enabling the connection inside YouWare automatically unlocks access to arXiv metadata—no additional setup required.
+  </Accordion>
+  <Accordion title="How do I limit papers to a specific field or time period?">
+    Include category codes (e.g., `cs.LG`, `math.PR`) or phrases like “published after January 2024” directly in your prompt.
+  </Accordion>
+  <Accordion title="Can YouWare fetch PDFs and code repositories?">
+    Yes. Download links, DOI references, and GitHub repos are included automatically when available on arXiv.
+  </Accordion>
+  <Accordion title="Can I merge arXiv data with internal knowledge?">
+    Absolutely. Combine the arXiv connection with YouWare Backend, Notion, or Supabase to overlay proprietary notes, roadmap items, or team assignments.
+  </Accordion>
+  <Accordion title="How often is the research list refreshed?">
+    New papers are pulled only when you regenerate the page. Automatic background updates or scheduling are not supported yet.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<Tip>
+**Prompt starter:**  
+`“Create a weekly newsletter section on reinforcement learning breakthroughs from arXiv, summarizing the top five papers with key insights, author affiliations, PDF links, and suggested business applications.”`
+</Tip>
+

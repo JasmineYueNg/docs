@@ -105,7 +105,10 @@
             "pages": [
               "connections/github-integration",
               "connections/supabase-integration",
-              "connections/notion-integration"
+              "connections/notion-integration",
+              "connections/youtube-connection",
+              "connections/google-maps-connection",
+              "connections/arxiv-connection"
             ]
           }
         ]

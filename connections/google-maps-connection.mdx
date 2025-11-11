@@ -1,0 +1,130 @@
+---
+title: "Google Maps Connection"
+description: "Pull live location data, reviews, and map embeds straight into your YouWare projects. Build discovery pages, local directories, and trip planners in minutes."
+canonical: "https://docs.youware.com/connections/google-maps-connection"
+---
+
+<Frame>
+  <img
+    src="/images/googlemaps.png"
+    alt="Google Maps connection overview with location cards and interactive map embeds"
+  />
+</Frame>
+
+<Info>
+**Turn real-world places into rich digital experiences.** Once the Google Maps connection is enabled, YouWare can reference business profiles, ratings, photos, and coordinates directly in your prompts—no API key configuration required.
+</Info>
+
+## Quick Summary
+
+- **Purpose:** Generate map-first pages, local guides, and location dashboards using live Google Maps data  
+- **Pulls:** Names, categories, ratings, review counts, open hours, addresses, coordinates, photos, and navigation links  
+- **Updates:** Data refreshes whenever you regenerate the page or request a manual sync  
+- **Best for:** Travel guides, store locators, competitor research, real-estate landing pages, city portals
+
+---
+
+## What is the Google Maps Connection?
+
+Mention any place, neighborhood, or coordinates in your prompt—YouWare fetches verified Google Maps data and designs sections around it. Build a “Best coffee in Seattle” directory, surface review highlights for “Mr Beast burger locations”, or embed interactive maps that jump straight to Google navigation.
+
+<CardGroup cols={3}>
+  <Card title="Location Directories" icon="map">
+    Curate lists of venues with photos, ratings, and quick filter controls
+  </Card>
+  <Card title="Interactive Landing Pages" icon="layout">
+    Pair hero sections with embedded maps, itineraries, and CTA buttons for directions or reservations
+  </Card>
+  <Card title="Competitor Dashboards" icon="analytics">
+    Compare nearby businesses, highlight review sentiment, and visualize coverage areas with heatmaps
+  </Card>
+</CardGroup>
+
+---
+
+## How It Works
+
+<Steps>
+  <Step title="Enable the connection">
+    Visit **Connections → Google Maps** and toggle it on. YouWare handles authentication—no Google Cloud setup required.
+  </Step>
+  <Step title="Describe the places you need">
+    Reference locations, business names, neighborhoods, or search intent inside your prompt. Example:  
+    _“Create a research microsite comparing the top-rated coffee shops around Pike Place Market in Seattle.”_
+  </Step>
+  <Step title="Preview generated sections">
+    YouWare assembles cards, tables, itinerary timelines, and embedded maps populated with fresh Google Maps data.
+  </Step>
+  <Step title="Refresh anytime">
+    Regenerate the page or trigger a manual sync to update hours, ratings, and new locations.
+  </Step>
+</Steps>
+
+---
+
+## Prompt Example
+
+```text
+"Create a research microsite for Tokyo Tower visitors that highlights the five best cafes within 1 km,
+including their specialties, signature drinks, opening hours, transport options, and a one-click navigation button."
+```
+
+---
+
+## Example: Tokyo Tower Cafe Tour
+
+When you run the prompt above, YouWare:
+
+1. Queries Google Maps for cafés within the requested radius, ranked by rating and review volume.  
+2. Generates rich cards for each café (brand story, must-try drink, hours, contact info, transport notes, and latest review snippets).  
+3. Embeds a Google Maps component with custom pins plus a “Plan Route” button that launches Google Maps directions from the user’s location.  
+4. Creates comparison tables (price level, seating, Wi-Fi availability) and suggested itineraries around Tokyo Tower.  
+
+This lets you ship an actionable local guide in minutes—perfect for tourism boards, creator newsletters, concierge teams, or sponsored campaigns.
+
+---
+
+## Best Practices
+
+- **Be precise with geography:** Mention city, neighborhood, or radius to keep results relevant  
+- **Mix narrative + data:** Ask for storytelling sections (“Why visit?”, “Local tips”) alongside map cards  
+- **Group by intent:** Separate categories like dining, lodging, attractions, or coworking spaces for easier browsing  
+- **Pair with Backend:** Save user-generated favorites or trip notes in YouWare Backend for personalized experiences  
+- **Enable route planning:** Ask explicitly for “one-click navigation” to surface Google Maps links or embedded directions  
+- **Use Street View + photos:** Request hero images or galleries sourced from Google photo data to boost engagement
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Do I need to provide a Google Maps API key?">
+    No. Enabling the connection inside YouWare is all it takes. We handle the credentials and quota—nothing else to configure.
+  </Accordion>
+  <Accordion title="What kinds of places can I reference?">
+    Any public location indexed by Google Maps: cafes, attractions, coworking spaces, retail stores, venues, landmarks, and more.
+  </Accordion>
+  <Accordion title="Can I filter results to a specific area?">
+    Yes. Mention city names, neighborhoods, postal codes, or distance constraints (e.g., “within 2km of Eiffel Tower”) in your prompt.
+  </Accordion>
+  <Accordion title="How often is the data updated?">
+    Every regeneration fetches the latest info. You can also request a manual refresh from the Connections panel if you expect major changes.
+  </Accordion>
+  <Accordion title="Can I blend Google Maps data with other sources?">
+    Definitely. Combine with YouWare Backend, Notion, or Supabase connections to enrich location content with internal notes, promotions, or community feedback.
+  </Accordion>
+  <Accordion title="Can YouWare build custom route planners?">
+    Yes. Ask for one-click navigation, itinerary builders, or step-by-step directions. YouWare will output Google Maps links, embedded routes, or call-to-action buttons based on your prompt.
+  </Accordion>
+  <Accordion title="Are there rate limits I should be aware of?">
+    YouWare abstracts quota management, but extremely high-volume use cases may require additional allowances. Reach out to support for enterprise usage.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<Tip>
+**Prompt starter:**  
+`“Plan a café crawl within 1 km of Tokyo Tower that ranks the top five spots, includes signature drink highlights, user review snippets, transit tips, and embeds a Google Maps route for the walking tour.”`
+</Tip>
+
