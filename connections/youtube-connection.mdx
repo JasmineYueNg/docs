@@ -1,0 +1,142 @@
+---
+title: "YouTube Connection"
+description: "Bring playlists, channel content, and engagement data directly into your YouWare projects. Automate updates, showcase videos, and personalize experiences with live YouTube data."
+canonical: "https://docs.youware.com/connections/youtube-connection"
+---
+
+<Frame>
+  <img
+    src="/images/YouTube.png"
+    alt="YouTube connection overview showing embedded channel data and video cards"
+  />
+</Frame>
+
+<Info>
+**Ship video-first experiences without manual embeds.** Connect any YouTube channel, playlist, or video to automatically sync metadata, thumbnails, and analytics into your YouWare project.
+</Info>
+
+## Quick Summary
+
+- **Purpose:** Keep YouTube-powered sections (galleries, landing pages, dashboards) in sync automatically  
+- **Works with:** Channels, individual videos, playlists, Shorts, and livestreams  
+- **Updates:** Pulls fresh data on publish or on a schedule you define  
+- **Best for:** Product launches, creator hubs, media companies, course platforms, event recaps
+
+---
+
+## What is the YouTube Connection?
+
+The YouTube connection brings your channel data directly into YouWare so the AI can design pages, sections, and interactions around your latest content. Instead of manually embedding videos or updating thumbnails, YouWare reads the YouTube API for titles, descriptions, stats, and more—then builds layouts that feel natively integrated.
+
+<CardGroup cols={3}>
+  <Card title="Auto-Synced Video Walls" icon="grid">
+    Showcase the newest uploads with thumbnails, durations, and view counts that stay current
+  </Card>
+  <Card title="Creator Landing Pages" icon="users">
+    Highlight playlists, featured collabs, sponsorship callouts, and newsletter opt-ins—all generated from your channel data
+  </Card>
+  <Card title="Live Analytics Dashboards" icon="chart-line">
+    Monitor performance with watch time, subscriber growth, and engagement trends pulled into YouWare visualizations
+  </Card>
+</CardGroup>
+
+---
+
+## Why Teams Love It
+
+- **One source of truth:** Link once—YouWare syncs titles, descriptions, captions, and thumbnails automatically  
+- **AI-aware content:** The builder understands your channel’s structure and tone when generating copy or layouts  
+- **Personalization-ready:** Combine YouTube stats with YouWare Backend to tailor recommendations for repeat visitors  
+- **No more manual embeds:** Swap dynamic carousels, hero callouts, or modals into any page with Mintlify components
+
+---
+
+## Connect in Minutes
+
+<Steps>
+  <Step title="Create a YouTube Data API key">
+    Head to the [Google Cloud Console](https://console.cloud.google.com/). Enable the **YouTube Data API v3**, then generate an API key with read-only access.
+  </Step>
+  <Step title="Store the key securely">
+    Add your API key inside **Connections → YouTube** in your YouWare workspace. Keys are encrypted and never exposed client-side.
+  </Step>
+  <Step title="Choose your data sources">
+    Select which channels, playlists, or video IDs YouWare should fetch. You can mix public and unlisted videos as long as the API key has access.
+  </Step>
+  <Step title="Describe the experience you want">
+    In your prompt, mention the YouTube connection (e.g., “Create a landing page that showcases my latest playlist and a subscriber milestone banner.”)
+  </Step>
+  <Step title="Preview & launch">
+    YouWare pulls the content, builds responsive sections, and keeps them updated every time the page is regenerated or the sync schedule runs.
+  </Step>
+</Steps>
+
+---
+
+## Best Practices
+
+- **Group content with playlists:** Separate playlists for releases, tutorials, or Shorts so layouts stay organized  
+- **Use thumbnails as hero art:** Ask YouWare to create hero sections that dynamically swap backgrounds based on the latest video  
+- **Combine with Credit Care:** Experiment freely—roll back AI changes if a layout doesn’t perform  
+- **Schedule refreshes:** Set nightly or hourly syncs for high-volume channels to keep metrics current  
+- **Localize for regional audiences:** Pair YouTube metadata with language-specific copy prompts for global reach
+
+---
+
+## Real-World Use Cases
+
+<Tabs>
+  <Tab title="Creator Hub">
+    <Card title="Personal brand HQ" icon="star">
+      Showcase featured videos, embed upcoming tour dates, and plug memberships. YouWare keeps thumbnails, view counts, and CTAs fresh.
+    </Card>
+  </Tab>
+  <Tab title="Product Launch">
+    <Card title="Video-first landing page" icon="rocket">
+      Pair launch trailers with feature highlights, testimonials pulled from YouTube comments, and a conversion-focused CTA.
+    </Card>
+  </Tab>
+  <Tab title="Education">
+    <Card title="Course library" icon="graduation-cap">
+      Organize lesson playlists, surface recommended modules, and sync transcript snippets for SEO without lifting a finger.
+    </Card>
+  </Tab>
+  <Tab title="Media Network">
+    <Card title="Editorial hub" icon="newspaper">
+      Build verticals for shows, creators, or genres; drive traffic back to YouTube or run sponsorship inventory on your own site.
+    </Card>
+  </Tab>
+</Tabs>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Can I surface only certain playlists or videos?">
+    Yes. When configuring the connection you can specify channel IDs, playlist IDs, or individual video IDs. The AI will only use the sources you approve.
+  </Accordion>
+  <Accordion title="Does this work with Shorts and livestreams?">
+    Absolutely. Shorts and live replay metadata are treated like standard videos—YouWare can design grids, story strips, or countdown banners around them.
+  </Accordion>
+  <Accordion title="How often does YouWare refresh the data?">
+    Syncs run every time you regenerate the page and on any custom schedule you define (hourly, daily, weekly). Manual refresh is available from the Connections panel.
+  </Accordion>
+  <Accordion title="Will embedding lots of videos hurt performance?">
+    YouWare lazy-loads embeds and swaps in optimized thumbnails until interaction. You can also choose text-only cards that open modals or link to YouTube watch pages.
+  </Accordion>
+  <Accordion title="Can I mix YouTube with other data sources?">
+    Yes. Combine the YouTube connection with YouWare Backend, Notion, or Supabase connections to blend videos with articles, product data, or community content.
+  </Accordion>
+  <Accordion title="Is API quota a concern?">
+    Standard YouTube API quotas apply. For most marketing and creator sites the default limits are plentiful, but you can request more from Google Cloud if needed.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<Tip>
+**Need help crafting prompts?** Try:  
+`“Create a homepage for my channel that features the latest playlist, highlights top Shorts, and includes a sign-up form for my newsletter.”`
+</Tip>
+
