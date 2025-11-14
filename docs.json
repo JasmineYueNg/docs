@@ -89,23 +89,23 @@
           {
             "group": "AI API",
             "pages": [
-              "connections/ai-app-integration",
+              "connections/ai-api-connection",
               "connections/ai-api-models"
             ]
           },
           {
             "group": "Highly Recommend",
             "pages": [
-              "connections/figma-integration",
-              "connections/youware-backend-integration"
+              "connections/figma-connection",
+              "connections/youware-backend-connection"
             ]
           },
           {
             "group": "Other Connections",
             "pages": [
-              "connections/github-integration",
-              "connections/supabase-integration",
-              "connections/notion-integration",
+              "connections/github-connection",
+              "connections/supabase-connection",
+              "connections/notion-connection",
               "connections/youtube-connection",
               "connections/google-maps-connection",
               "connections/arxiv-connection"
