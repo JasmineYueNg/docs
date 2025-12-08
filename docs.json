@@ -65,7 +65,8 @@
             "group": "Publishing & Management",
             "pages": [
               "features/share",
-              "features/creator-studio"
+              "features/creator-studio",
+              "features/custom-domain"
             ]
           },
           {
