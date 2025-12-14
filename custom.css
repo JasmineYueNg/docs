@@ -1,0 +1,21 @@
+/* YouBase tab - light/subtle color */
+[data-tab="YouBase"] {
+  opacity: 0.45;
+  color: rgba(85, 100, 74, 0.45) !important;
+}
+
+[data-tab="YouBase"]:hover {
+  opacity: 0.6;
+  color: rgba(85, 100, 74, 0.6) !important;
+}
+
+/* Alternative: using CSS variables */
+.sidebar-tab[data-tab="YouBase"],
+.nav-tab[data-tab="YouBase"],
+[aria-label*="YouBase"],
+button:has(+ *[aria-label*="YouBase"]),
+a:has(*:contains("YouBase")) {
+  opacity: 0.4;
+  color: var(--light, #AAB39A) !important;
+}
+

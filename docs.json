@@ -9,6 +9,7 @@
   "appearance": {
     "disableDarkMode": true
   },
+  "css": "/custom.css",
   "favicon": "/favicon.png",
   "logo": "/logo/youware-logo.png",
   "topbarCta": {
@@ -121,6 +122,26 @@
             "group": "Prompt Craft",
             "pages": [
               "prompting/prompting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "YouBase",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "youbase/introduction"
+            ]
+          },
+          {
+            "group": "Modules",
+            "pages": [
+              "youbase/users-authentication",
+              "youbase/database",
+              "youbase/storage",
+              "youbase/secrets"
             ]
           }
         ]
