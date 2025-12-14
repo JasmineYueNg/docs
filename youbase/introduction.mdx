@@ -86,22 +86,25 @@ If your project uses AI API (MCP) features, those features will stop working aft
 
 ### Projects With Legacy YouWare Backend
 
-- The new Agent is **not compatible** with projects using the legacy YouWare Backend
-- Automatic migration to YouBase is **not available** for these projects
-- These projects will continue to work with the legacy database UI
+- These projects can **continue to work normally** with the legacy database UI
+- The new Agent is **not compatible** with legacy YouWare Backend projects
+- **YouBase cannot be enabled** on these projects
 
 <Warning>
-**Projects using the legacy YouWare Backend cannot be automatically migrated to YouBase.** The new Agent cannot remove the legacy backend configuration from existing projects.
+**Projects using the legacy YouWare Backend cannot use YouBase.** The new Agent cannot work alongside the legacy backend configuration.
 
-If you want to use YouBase with your existing project code, the only solution is to:
-1. Download your project code from the legacy project
-2. **Stop using the legacy backend project** - do not continue with it
-3. Create a new project with YouBase enabled
-4. Upload your downloaded code to the new YouBase-enabled project
+You have two options:
 
-This ensures your project uses YouBase instead of the deprecated legacy backend.
+1. **Keep using the legacy backend** - Continue with your current YouWare Backend project as it is. It will keep working indefinitely.
 
-For assistance with this migration process, contact [support@youware.com](mailto:support@youware.com)
+2. **Switch to YouBase** - If you want to use YouBase features, you need to:
+   - Download your project code from the legacy project
+   - Create a new project with YouBase enabled
+   - Upload your downloaded code to the new YouBase project
+
+There is no way to automatically migrate or convert a legacy backend project to YouBase.
+
+For assistance, contact [support@youware.com](mailto:support@youware.com)
 </Warning>
 
 ## For New Projects
