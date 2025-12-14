@@ -1,0 +1,259 @@
+---
+title: "Users & Authentication"
+description: "Manage user accounts, login access, and identity for your YouBase project with email and Google authentication."
+canonical: "https://docs.youware.com/youbase/users-authentication"
+---
+
+# Users & Authentication
+
+Users & Auth provides account and identity management for your project.
+
+It allows your project to recognize users, manage login access, and associate data or behavior with specific user accounts.
+
+<CardGroup cols={3}>
+  <Card title="Email Login" icon="envelope">
+    Built-in email authentication with secure password handling
+  </Card>
+  <Card title="Google Login" icon="google">
+    One-click Google OAuth integration
+  </Card>
+  <Card title="Access Control" icon="shield-halved">
+    Block or allow user access instantly
+  </Card>
+</CardGroup>
+
+---
+
+## User List Overview
+
+The user list displays all registered users in your project.
+
+When no users exist yet, the empty state shows:
+
+<Note>
+**No users yet.**
+
+Users will appear here once someone signs up or logs in.
+</Note>
+
+Once users are present, the list displays key information for each user account.
+
+---
+
+## User Table Details
+
+Each user row includes:
+
+<CardGroup cols={2}>
+  <Card title="User ID" icon="fingerprint">
+    System-generated, unique identifier
+  </Card>
+  <Card title="Email Address" icon="at">
+    User's registered email
+  </Card>
+  <Card title="Login Method" icon="right-to-bracket">
+    Email or Google
+  </Card>
+  <Card title="Account Status" icon="circle-check">
+    Active or Blocked
+  </Card>
+  <Card title="Created At" icon="calendar">
+    Account creation timestamp
+  </Card>
+</CardGroup>
+
+<Info>
+All timestamps are displayed in the user's local timezone. User IDs are immutable and used internally to associate data with users.
+</Info>
+
+---
+
+## Supported Login Methods
+
+In YouBase 1.0, the following login methods are supported:
+
+<Tabs>
+  <Tab title="Email Login">
+    <Card title="Email Authentication" icon="envelope">
+      Traditional email and password authentication.
+      
+      **Features:**
+      - Secure password storage
+      - Password validation
+      - Account verification
+      
+      Authentication flows, password handling, and credential storage are fully managed by YouBase.
+    </Card>
+  </Tab>
+  <Tab title="Google Login">
+    <Card title="Google OAuth" icon="google">
+      One-click login with Google accounts.
+      
+      **Features:**
+      - Seamless OAuth integration
+      - No password management required
+      - Trusted identity provider
+      
+      Users can sign in with their existing Google account instantly.
+    </Card>
+  </Tab>
+</Tabs>
+
+<Warning>
+Sensitive authentication data (such as passwords or tokens) is never exposed to the frontend.
+</Warning>
+
+---
+
+## User Status & Access Control
+
+You can manage user access directly from the user list.
+
+<Steps>
+  <Step title="View User List">
+    Navigate to the Users & Auth section in YouBase to see all registered users.
+  </Step>
+  <Step title="Select User">
+    Click on a user row to view their details and available actions.
+  </Step>
+  <Step title="Block or Allow Access">
+    Toggle user access status. Blocking a user immediately prevents further login.
+  </Step>
+</Steps>
+
+<CardGroup cols={2}>
+  <Card title="Allow Access" icon="circle-check">
+    User can log in and use the application normally
+  </Card>
+  <Card title="Block Access" icon="ban">
+    User cannot log in until access is restored. Existing data is retained.
+  </Card>
+</CardGroup>
+
+<Tip>
+User deletion is not supported in YouBase 1.0 to prevent accidental data loss. Block users instead of deleting them.
+</Tip>
+
+---
+
+## How Users Are Used in Projects
+
+Users & Auth is required for:
+
+<CardGroup cols={2}>
+  <Card title="Member-only Features" icon="lock">
+    Login-based or restricted access features
+  </Card>
+  <Card title="User Data Storage" icon="database">
+    Store and retrieve user-specific data
+  </Card>
+  <Card title="Personalization" icon="user-gear">
+    Customize experiences per user
+  </Card>
+  <Card title="Usage Tracking" icon="chart-line">
+    Track usage history per user
+  </Card>
+</CardGroup>
+
+<Info>
+If your project does not require user identity, this module is optional.
+</Info>
+
+---
+
+# Common Use Cases
+
+Below are some common scenarios where **Users & Authentication** is useful.
+
+You don't need to implement all of these — use them as references to decide whether this module fits your project.
+
+<AccordionGroup>
+  <Accordion title="1. Member-only pages or features" icon="lock">
+    **Scenario**
+
+    You want some pages or features to be accessible only after login.
+
+    **Examples**
+    - A private dashboard
+    - A paid or invite-only tool
+    - Internal tools for a team
+
+    **What Users & Auth provides**
+    - User login and identity
+    - Ability to block or allow access per user
+  </Accordion>
+
+  <Accordion title="2. Saving user-specific data" icon="floppy-disk">
+    **Scenario**
+
+    Different users should see or modify their own data.
+
+    **Examples**
+    - A form where each user sees their own submissions
+    - A to-do list or notes app
+    - An AI tool that remembers past inputs per user
+
+    **What Users & Auth provides**
+    - A stable user ID
+    - The ability to associate database records with specific users
+  </Accordion>
+
+  <Accordion title="3. Personalized experiences" icon="wand-magic-sparkles">
+    **Scenario**
+
+    Your app should behave differently depending on who is using it.
+
+    **Examples**
+    - Showing "Welcome back" messages
+    - Displaying user-specific settings or preferences
+    - Restoring previous sessions or history
+
+    **What Users & Auth provides**
+    - User identity recognition
+    - Persistent accounts across sessions and devices
+  </Accordion>
+
+  <Accordion title="4. Controlling access without deleting data" icon="user-lock">
+    **Scenario**
+
+    You want to temporarily disable a user without losing their data.
+
+    **Examples**
+    - Suspending a user account
+    - Restricting access during testing
+    - Handling misuse or abuse cases
+
+    **What Users & Auth provides**
+    - Block / unblock user access
+    - Preservation of all existing user data
+  </Accordion>
+
+  <Accordion title="5. Simple login for early-stage products" icon="rocket">
+    **Scenario**
+
+    You are building an MVP or prototype and want basic login without managing auth logic.
+
+    **Examples**
+    - Early SaaS prototypes
+    - Side projects with limited users
+    - Internal demos
+
+    **What Users & Auth provides**
+    - Fully managed email or Google login
+    - Secure password handling without backend setup
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## When you might not need Users & Auth
+
+<Note>
+If your project:
+
+- Does not require login
+- Does not store user-specific data
+- Is purely informational or static
+
+You can keep **Users & Auth** disabled and enable it later when needed.
+</Note>

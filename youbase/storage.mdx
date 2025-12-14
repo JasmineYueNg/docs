@@ -1,0 +1,307 @@
+---
+title: "Storage"
+description: "Learn how to use the YouBase Storage module for file upload and download capabilities, including file management, multi-file downloads, and common use cases."
+canonical: "https://docs.youware.com/youbase/storage"
+---
+
+# Storage
+
+Storage provides file upload and download capabilities for your project.
+
+It is enabled automatically once YouBase is active.
+
+<CardGroup cols={3}>
+  <Card title="File Upload" icon="upload">
+    Store user-uploaded files in the cloud
+  </Card>
+  <Card title="File Download" icon="download">
+    Download files individually or as ZIP bundles
+  </Card>
+  <Card title="Persistent Storage" icon="cloud">
+    Files remain accessible across sessions and devices
+  </Card>
+</CardGroup>
+
+---
+
+## Storage Overview
+
+The storage list shows all files and folders stored in your project.
+
+When no files exist, the empty state shows:
+
+<Note>
+**No files yet.**
+
+Files will appear here once they're uploaded.
+</Note>
+
+Once files are available, the storage list displays all uploaded content organized by folders.
+
+---
+
+## File & Folder List
+
+The storage list displays items in a table view with the following columns:
+
+<CardGroup cols={2}>
+  <Card title="Name" icon="file">
+    File or folder name
+  </Card>
+  <Card title="Size" icon="weight-hanging">
+    File size (folders show `–`)
+  </Card>
+  <Card title="Type" icon="file-lines">
+    File type/extension (folders show `–`)
+  </Card>
+  <Card title="Last Modified" icon="clock">
+    Timestamp in user's local timezone (folders show `–`)
+  </Card>
+</CardGroup>
+
+<Info>
+Clicking a folder opens its contents. All timestamps are displayed in the user's local timezone.
+</Info>
+
+### Pagination
+
+<CardGroup cols={2}>
+  <Card title="Paginated Browsing" icon="book-open">
+    Navigate through files page by page
+  </Card>
+  <Card title="25 Items Per Page" icon="list-ol">
+    Up to 25 items displayed per page
+  </Card>
+</CardGroup>
+
+---
+
+## Downloading Files
+
+You can download files directly from the storage list.
+
+<Steps>
+  <Step title="Select Files">
+    Choose one or more files from the storage list by clicking on them.
+  </Step>
+  <Step title="Click Download">
+    Click the Download button to start the download process.
+  </Step>
+  <Step title="Wait for Preparation">
+    For multiple files, a loading state ("Preparing…") is shown during packaging.
+  </Step>
+  <Step title="Download Starts">
+    Downloads start automatically once preparation is complete.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="Single File">
+    <Card title="Single File Download" icon="file">
+      Select one file and click Download.
+      
+      **Behavior:**
+      - The file downloads directly
+      - No additional packaging required
+    </Card>
+  </Tab>
+  <Tab title="Multiple Files">
+    <Card title="Multiple File or Folder Download" icon="file-zipper">
+      Select multiple items (files or folders).
+      
+      **Behavior:**
+      - Selected items are packaged into a ZIP file
+      - A loading state ("Preparing…") is shown during preparation
+      - Downloads start automatically once preparation is complete
+    </Card>
+  </Tab>
+</Tabs>
+
+<Tip>
+For large downloads with many files, the preparation step may take a few moments. The download will begin automatically once the ZIP is ready.
+</Tip>
+
+---
+
+## Refreshing Storage
+
+<Steps>
+  <Step title="Locate Refresh Icon">
+    Find the refresh icon at the top of the storage list.
+  </Step>
+  <Step title="Click to Refresh">
+    Click the refresh icon to reload the file list.
+  </Step>
+  <Step title="View Latest State">
+    The storage list updates to show the most recent files and folders.
+  </Step>
+</Steps>
+
+<Info>
+Use refresh to see newly uploaded files or verify storage changes made by your application.
+</Info>
+
+---
+
+## Storage Limitations (YouBase 1.0)
+
+In YouBase 1.0, certain features are intentionally limited:
+
+<CardGroup cols={2}>
+  <Card title="Upload & Download" icon="circle-check">
+    File upload and download are **supported**
+  </Card>
+  <Card title="File Preview" icon="circle-xmark">
+    File preview is **not supported**
+  </Card>
+  <Card title="File Deletion" icon="circle-xmark">
+    File deletion is **not supported**
+  </Card>
+  <Card title="Agent Modification" icon="circle-xmark">
+    Agents **cannot** directly modify storage contents
+  </Card>
+</CardGroup>
+
+<Warning>
+These limitations are intentional to reduce risk and complexity in early versions. File management features will be expanded in future releases.
+</Warning>
+
+---
+
+## When to Use Storage
+
+Storage is recommended when your project needs:
+
+<CardGroup cols={2}>
+  <Card title="User Uploads" icon="upload">
+    User-uploaded files (images, documents, attachments)
+  </Card>
+  <Card title="Generated Assets" icon="file-export">
+    Generated assets or exports
+  </Card>
+  <Card title="Media & Documents" icon="photo-film">
+    Media or documents associated with records
+  </Card>
+  <Card title="Multi-file Downloads" icon="file-zipper">
+    Bundled downloads for offline work
+  </Card>
+</CardGroup>
+
+<Note>
+If your project does not handle files, Storage can be ignored and enabled later when needed.
+</Note>
+
+---
+
+# Common Use Cases
+
+Below are common scenarios where **Storage** is useful.
+
+Use these examples to decide whether your project needs file upload and download capabilities.
+
+<AccordionGroup>
+  <Accordion title="1. User uploads (images, documents, attachments)" icon="image">
+    **Scenario**
+
+    Users need to upload files as part of your product experience.
+
+    **Examples**
+    - Profile photos / avatars
+    - Resume or document uploads
+    - Attachments submitted with forms
+
+    **What Storage provides**
+    - A safe place to store uploaded files
+    - Download access when you need to retrieve files later
+    - A reliable file layer for real user workflows
+  </Accordion>
+
+  <Accordion title="2. Generated files and AI outputs" icon="robot">
+    **Scenario**
+
+    Your project generates files that users should be able to download.
+
+    **Examples**
+    - AI-generated reports (PDFs)
+    - Exported summaries or results
+    - Generated images or documents
+
+    **What Storage provides**
+    - A place to store generated assets
+    - Simple download flows (single file or ZIP)
+    - A stable way to deliver outputs to users
+
+    *(Often used together with Functions)*
+  </Accordion>
+
+  <Accordion title="3. Media or documents linked to database records" icon="database">
+    **Scenario**
+
+    Each item in your database should have related files.
+
+    **Examples**
+    - A product catalog where each product has images
+    - A content library with attachments
+    - A CRM where each customer record stores documents
+
+    **What Storage provides**
+    - File storage that can be associated with database records
+    - A simple way to manage assets across your app
+
+    *(Often used together with Database)*
+  </Accordion>
+
+  <Accordion title="4. Multi-file downloads (bundles)" icon="file-zipper">
+    **Scenario**
+
+    Users need to download multiple files at once.
+
+    **Examples**
+    - Downloading a set of generated assets
+    - Exporting a collection of attachments for review
+    - Collecting files for offline work
+
+    **What Storage provides**
+    - Download multiple files or folders as a ZIP archive
+    - Automatic preparation and download once ready
+  </Accordion>
+
+  <Accordion title="5. Sharing files across sessions and devices" icon="cloud">
+    **Scenario**
+
+    Files should remain accessible after refresh, logout, or on another device.
+
+    **Examples**
+    - A workspace where users revisit uploaded documents later
+    - A tool that stores ongoing project assets
+    - Returning users downloading previously generated outputs
+
+    **What Storage provides**
+    - Persistent, cloud-hosted file storage
+    - Consistent access across sessions and environments
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## When you might not need Storage
+
+<Note>
+You may not need Storage if your project:
+
+- Doesn't accept uploads
+- Doesn't generate downloadable files
+- Doesn't attach media/documents to stored records
+
+Storage can be enabled later when your project expands into file-based workflows.
+</Note>
+
+---
+
+## Note (YouBase 1.0)
+
+<Info>
+In YouBase 1.0, Storage supports **upload + download**, but some management features (like previews and deletion) are intentionally limited.
+
+This keeps early versions safer and simpler while most real workflows still work end-to-end.
+</Info>

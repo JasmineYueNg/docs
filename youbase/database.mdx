@@ -1,0 +1,406 @@
+---
+title: "Database"
+description: "Learn how to use the YouBase Database module for structured data storage, including table management, data export, time travel, and bookmarks."
+canonical: "https://docs.youware.com/youbase/database"
+---
+
+# Database
+
+The Database module provides structured data storage for your project.
+
+It allows you to view, manage, and export the data your project generates, and serves as the foundation for most data-driven features in YouBase.
+
+<CardGroup cols={3}>
+  <Card title="Data Storage" icon="database">
+    Persistent, structured storage for your project data
+  </Card>
+  <Card title="Export & Backup" icon="download">
+    Download your data anytime for backup or analysis
+  </Card>
+  <Card title="Time Travel" icon="clock-rotate-left">
+    Restore your database to any previous state
+  </Card>
+</CardGroup>
+
+---
+
+## Tables Overview
+
+The table list shows all database tables in your project.
+
+When no data exists yet, you will see a placeholder message:
+
+<Note>
+**No data yet.**
+
+Tables will appear here once your project starts storing information.
+</Note>
+
+Once data is available, the table list displays:
+
+- All tables in the project
+- The total number of rows in each table
+- The latest autosave status
+
+<Info>
+When the database contains data, the autosave status appears at the top: **"Autosaved: just now · Time Travel"**. Selecting **Time Travel** opens the database history and restore view.
+</Info>
+
+---
+
+## Table List Capabilities
+
+From the table list, you can:
+
+<CardGroup cols={3}>
+  <Card title="View Tables" icon="table">
+    See all tables and their row counts
+  </Card>
+  <Card title="Copy Names" icon="copy">
+    Copy table names by hovering over them
+  </Card>
+  <Card title="Refresh Data" icon="rotate">
+    Refresh the table list to load the latest data
+  </Card>
+</CardGroup>
+
+---
+
+## Exporting the Database
+
+You can export all database data at the project level.
+
+<Tabs>
+  <Tab title="Free Users">
+    <Card title="Export Restricted" icon="lock">
+      Clicking Export opens an upgrade prompt.
+      
+      **Note:**
+      - The export feature is labeled as a Pro capability
+      - Upgrade to Pro or Ultra to enable database exports
+    </Card>
+  </Tab>
+  <Tab title="Paid Users">
+    <Card title="Full Export Access" icon="download">
+      Export preparation starts immediately.
+      
+      **Features:**
+      - A loading state ("Preparing data") is shown
+      - Once ready, the browser automatically downloads the export file
+      - Exports are suitable for backup and external analysis
+    </Card>
+  </Tab>
+</Tabs>
+
+---
+
+## Table Details
+
+Selecting a table opens the table detail view, where you can inspect its contents.
+
+<CardGroup cols={2}>
+  <Card title="Paginated Browsing" icon="book-open">
+    Navigate through records page by page
+  </Card>
+  <Card title="Adjustable Page Size" icon="list-ol">
+    Choose 25, 50, or 100 rows per page (default: 50)
+  </Card>
+</CardGroup>
+
+<Info>
+Each row represents a single record stored in the database.
+</Info>
+
+---
+
+## Working with Table Data
+
+Inside a table, you can:
+
+<CardGroup cols={2}>
+  <Card title="View Records" icon="eye">
+    View all records stored in the table
+  </Card>
+  <Card title="Copy Cell Values" icon="clipboard">
+    Copy individual cell values by hovering over a cell
+  </Card>
+  <Card title="Copy Column Names" icon="columns">
+    Copy column names for reference or debugging
+  </Card>
+  <Card title="Refresh Table" icon="arrows-rotate">
+    Refresh the table to load the latest data
+  </Card>
+</CardGroup>
+
+<Tip>
+These actions allow you to inspect and verify data without modifying table structure.
+</Tip>
+
+---
+
+## Exporting Table Data
+
+You can export data from an individual table.
+
+- Exported data is packaged as a **ZIP file**
+- Each export contains only the selected table's data
+
+<Info>
+Export behavior follows the same rules as database export: Free users are prompted to upgrade, while paid users receive the prepared download automatically.
+</Info>
+
+---
+
+## Table Structure & Limitations
+
+In YouBase 1.0:
+
+<CardGroup cols={2}>
+  <Card title="Row Operations" icon="circle-check">
+    You **can** add, edit, and delete rows
+  </Card>
+  <Card title="Schema Management" icon="circle-xmark">
+    You **cannot** manually modify table structure
+  </Card>
+</CardGroup>
+
+<Warning>
+Tables and columns are managed by the system. Users cannot add or remove tables or columns directly. This design keeps data structures stable and avoids accidental schema changes in production projects.
+</Warning>
+
+---
+
+## Time Travel & Bookmarks
+
+YouBase provides a Time Travel view for database history and recovery.
+
+This feature allows you to restore your database to a specific historical point.
+
+<CardGroup cols={2}>
+  <Card title="View History" icon="clock-rotate-left">
+    Browse through all recorded database changes
+  </Card>
+  <Card title="Restore Anytime" icon="rotate-left">
+    Roll back to any previous state with one click
+  </Card>
+</CardGroup>
+
+---
+
+## Bookmarks
+
+Bookmarks record key changes in your database and are listed in reverse chronological order (most recent first).
+
+Each bookmark includes:
+
+- Timestamp (displayed in the user's local timezone)
+- Change description
+- Affected table(s), when applicable
+
+---
+
+## Bookmark Types
+
+There are three types of bookmarks:
+
+<Tabs>
+  <Tab title="Agent Changes">
+    <Card title="Automatic System Bookmarks" icon="robot">
+      Automatically created when the system modifies the database.
+      
+      **Examples:**
+      - `Deleted {n} rows from "{table}"`
+      - `Added {n} rows to "{table}"`
+      - `Created table "{table}"`
+      - `Added column "{column}" to "{table}"`
+      - `Modified "{table}" with 4 changes`
+      - `Modified database with 2 changes`
+    </Card>
+  </Tab>
+  <Tab title="Manual Bookmarks">
+    <Card title="User-Created Bookmarks" icon="bookmark">
+      Created manually by the user to mark an important moment.
+      
+      **Example:**
+      - `Manual Bookmark · In Memory of 1K Users`
+      
+      Use manual bookmarks to mark milestones or important states you might want to restore later.
+    </Card>
+  </Tab>
+  <Tab title="Restore Bookmarks">
+    <Card title="Restore Records" icon="clock-rotate-left">
+      Automatically created after a successful restore action.
+      
+      **Example:**
+      - `Restore to 11-06 19:25:32`
+      
+      These bookmarks help you track when and where you restored your database.
+    </Card>
+  </Tab>
+</Tabs>
+
+---
+
+## Restore Behavior & Plan Limits
+
+<Warning>
+Restoring overwrites the current database state. All restore actions require confirmation.
+</Warning>
+
+<Tabs>
+  <Tab title="Free">
+    <Card title="Free Plan" icon="user">
+      - Can view recent bookmarks only
+      - Older bookmarks are hidden with an upgrade prompt
+      - Restore not available
+    </Card>
+  </Tab>
+  <Tab title="Pro">
+    <Card title="Pro Plan" icon="star">
+      - Can view bookmarks up to **14 days**
+      - Restore and manual bookmark actions require upgrading to Ultra
+    </Card>
+  </Tab>
+  <Tab title="Ultra">
+    <Card title="Ultra Plan" icon="crown">
+      - Can restore to any available timestamp
+      - Can manually add bookmarks
+      - Full access to database recovery features
+    </Card>
+  </Tab>
+</Tabs>
+
+<Info>
+Upgrade prompts clearly indicate required plans before actions are taken.
+</Info>
+
+---
+
+## When to Use the Database
+
+The Database module is recommended when your project needs:
+
+<CardGroup cols={2}>
+  <Card title="Persistent Storage" icon="hard-drive">
+    Store data that persists across sessions
+  </Card>
+  <Card title="Data Inspection" icon="magnifying-glass">
+    View and export your project's data
+  </Card>
+  <Card title="Data Recovery" icon="rotate-left">
+    Recover from accidental data changes
+  </Card>
+  <Card title="AI Memory" icon="brain">
+    Support for AI memory, logs, or usage history
+  </Card>
+</CardGroup>
+
+<Note>
+If your project does not store structured data, the Database module is optional.
+</Note>
+
+---
+
+# Common Use Cases
+
+Below are common scenarios where the **Database** module is useful.
+
+You don't need to match all of them — use these examples to decide whether your project needs structured data storage.
+
+<AccordionGroup>
+  <Accordion title="1. Saving form submissions" icon="file-lines">
+    **Scenario**
+
+    You want to store information submitted by users through a form.
+
+    **Examples**
+    - Contact forms
+    - Feedback or survey responses
+    - Sign-up or waitlist forms
+
+    **What the Database provides**
+    - Persistent storage for each submission
+    - Ability to review and export collected data
+    - A reliable record even after page refreshes or restarts
+  </Accordion>
+
+  <Accordion title="2. Powering lists, tables, or dashboards" icon="table-columns">
+    **Scenario**
+
+    Your UI displays a list of items that should update as data changes.
+
+    **Examples**
+    - Task or to-do lists
+    - Admin dashboards
+    - Content management views
+
+    **What the Database provides**
+    - Structured tables to store items
+    - Row-based records that map cleanly to UI elements
+    - Stable data that can be reused across multiple pages
+  </Accordion>
+
+  <Accordion title="3. User-specific data storage" icon="user-lock">
+    **Scenario**
+
+    Each user should only see or modify their own data.
+
+    **Examples**
+    - Personal notes or bookmarks
+    - User profiles or settings
+    - Saved progress in a tool or workflow
+
+    **What the Database provides**
+    - Records that can be associated with user accounts
+    - Persistent data tied to a specific user identity
+    - A foundation for personalized experiences
+
+    *(Requires Users & Authentication)*
+  </Accordion>
+
+  <Accordion title="4. AI memory and usage history" icon="brain">
+    **Scenario**
+
+    Your AI-powered app needs to remember past interactions or inputs.
+
+    **Examples**
+    - Chat history
+    - Previous prompts or results
+    - Usage logs for analysis or improvement
+
+    **What the Database provides**
+    - Reliable storage for historical records
+    - Structured data suitable for querying or analysis
+    - A stable memory layer across sessions
+  </Accordion>
+
+  <Accordion title="5. Internal tools and early-stage SaaS" icon="rocket">
+    **Scenario**
+
+    You are building a prototype or internal tool that relies on real data.
+
+    **Examples**
+    - Internal trackers
+    - Lightweight CRMs
+    - Early SaaS dashboards
+
+    **What the Database provides**
+    - Production-ready data storage without schema management
+    - Built-in export and recovery tools
+    - Safety features like Time Travel and bookmarks
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## When you might not need the Database
+
+<Note>
+If your project:
+
+- Is purely static or informational
+- Does not store user input or generated data
+- Does not require persistence across sessions
+
+You can keep the **Database** module disabled and enable it later when your project grows.
+</Note>

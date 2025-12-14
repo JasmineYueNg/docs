@@ -1,0 +1,201 @@
+---
+title: "YouBase Introduction"
+description: "Learn what YouBase is and how it powers your YouWare applications with cloud backend infrastructure, authentication, database storage, and more."
+canonical: "https://docs.youware.com/youbase/introduction"
+---
+
+<CardGroup cols={3}>
+  <Card title="Built-in Backend" icon="database">
+    Complete cloud infrastructure without deployment
+  </Card>
+  <Card title="Enterprise-Grade Security" icon="lock">
+    Private, encrypted, and always under your control
+  </Card>
+  <Card title="Zero Configuration" icon="zap">
+    Just describe what you need in natural language
+  </Card>
+</CardGroup>
+
+# What is YouBase?
+
+**YouBase is YouWare's built-in cloud database** — think of it as the backend that powers your application.
+
+If YouWare's visual interface is your app's "face," then YouBase is its "brain" and "memory." Without YouBase, your app is just a pretty picture: forms can't save data, users can't log in, and nothing persists. **With YouBase enabled, your app can actually "remember" user data and display personalized content for each person.**
+
+---
+
+## Overview
+
+YouBase is YouWare's cloud backend infrastructure that gives your project complete backend capabilities — including data storage, user authentication, server-side logic, and file management — all without deploying or maintaining your own servers.
+
+Simply describe what you need in natural language, and YouWare automatically generates the frontend and backend code, then runs it in the cloud for you. YouBase provides managed hosting, compute, and storage that scales on demand, from your first prototype to millions of users.
+
+**YouBase runs on YouWare-managed cloud infrastructure under your project's domain** (including custom domains), so you get enterprise-grade reliability without the complexity.
+
+---
+
+## In Simple Terms
+
+**YouBase is your app's "brain," "vault," and "cash register"** — it remembers who your users are (authentication), remembers what they do (data storage), and can even handle payments for you.
+
+---
+
+# Why Choose YouBase
+
+<CardGroup cols={3}>
+  <Card title="Scales on Demand" icon="arrow-up">
+    From prototype to production, YouBase scales seamlessly with your needs. Whether 10 users or 100,000 users visit your site, it loads instantly.
+  </Card>
+  <Card title="Enterprise-Grade Security" icon="shield">
+    Private, encrypted, and always under your control. Includes enterprise-level authentication, granular access controls, and compliance best practices.
+  </Card>
+  <Card title="High Performance" icon="bolt">
+    Fast and stable worldwide — no regional latency, no random downtime, no "server overload" moments.
+  </Card>
+</CardGroup>
+
+---
+
+# Getting Started with YouBase
+
+<img 
+  src="/images/youbase-introduction.png" 
+  alt="YouBase Introduction - Cloud backend infrastructure overview"
+  style={{ borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-200)', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
+/>
+
+<Tip>
+**YouBase is available by default** in your workspace. When your project needs backend functionality (such as user authentication or file storage), YouWare will prompt you to enable YouBase.
+</Tip>
+
+## Setup for Existing Projects
+
+For projects created **before the YouBase 1.0 release (December 15, 2025)**, enabling YouBase depends on your project type:
+
+### Projects Without Legacy YouWare Backend
+
+- The YouBase tab displays a **"Set up YouBase"** button
+- Clicking it prompts you to upgrade your project to the latest version
+- After upgrading, you gain access to:
+  - YouBase features (Database, Users, Functions, Storage)
+  - Independent and custom domain support
+
+<Warning>
+If your project uses AI API (MCP) features, those features will stop working after the upgrade.
+</Warning>
+
+### Projects With Legacy YouWare Backend
+
+- YouBase upgrade is **not available**
+- These projects retain the legacy database UI and continue working as before
+
+<Warning>
+**If your project previously used YouWare Backend (MCP), you cannot upgrade to YouBase.** This is a permanent limitation to protect your existing project configuration.
+
+If you absolutely need to migrate to YouBase, the only option is to:
+1. Download your project code
+2. Create a new project from scratch with YouBase enabled
+3. Upload your downloaded code to the new project
+
+For assistance with this process, contact [support@youware.com](mailto:support@youware.com)
+</Warning>
+
+## For New Projects
+
+Projects created **after the YouBase 1.0 release**:
+
+- Cannot enable the legacy YouWare Backend or AI API
+- Use YouBase for all backend functionality
+
+<Info>
+Existing projects already using the legacy YouWare Backend or AI API can continue using those features indefinitely.
+</Info>
+
+---
+
+# Pricing & Plans
+
+YouBase offers flexible plans to match your project's growth, from early prototypes to production applications.
+
+## Trial & Downgrade Policy
+
+When downgrading from Pro/Ultra to Free, YouBase retains your data for 7 days with the same experience as the Free plan trial period. Database export is disabled during this time. After 7 days, the backend automatically shuts down, but your data remains stored for an additional 30 days.
+
+## Plan Comparison
+
+| Feature | Free | Pro | Ultra |
+| --- | --- | --- | --- |
+| **Pricing** | $0 | $20/40 | $60/100/200/500 |
+| **YouBase Access** | Free 7-day trial (limited time) | ✓ | ✓ |
+| | Includes: Auth login, Secrets, Database, and all core features | | |
+| **Database Export** | ✗ Cannot download database or tables | ✓ Download full DB or individual tables | ✓ Download full DB or individual tables |
+| **Database Bookmark Retention** | 1 day | 14 days | 14 days |
+| **Database Restore** | ✗ | ✗ | ✓ |
+| **Database Size per Project** | 1 MB | 512 MB | 5 GB |
+| | *Unlimited during YouBase Beta* | *Unlimited during YouBase Beta* | *Unlimited during YouBase Beta* |
+| **Storage per Project** | 512 MB | 256 GB | 1 TB |
+| | *Unlimited during YouBase Beta* | *Unlimited during YouBase Beta* | *Unlimited during YouBase Beta* |
+| **Registered Users per Project** | 5 | 1,000 | 1,000,000 |
+| | *Unlimited during YouBase Beta* | *Unlimited during YouBase Beta* | *Unlimited during YouBase Beta* |
+
+---
+
+<Note>
+Features marked as "Unlimited during YouBase Beta" are temporarily unrestricted while YouBase is in beta. Standard limits will apply after the beta period ends.
+</Note>
+
+# FAQs
+
+<AccordionGroup>
+  <Accordion title="Do I need to enable all YouBase modules?">
+    No.
+
+    YouBase is modular. You can use Database, Users, Functions, or Storage independently based on your project's needs.
+  </Accordion>
+
+  <Accordion title="Can I use YouBase without writing backend code?">
+    Yes.
+
+    Many projects use Database, Users, and Storage without writing any backend code. Functions are only required for advanced custom logic or third-party integrations.
+  </Accordion>
+
+  <Accordion title="What happens when my subscription expires?">
+    - **Days 0–7**: YouBase remains usable with reminders
+    - **Days 7–30**: YouBase is disabled, but your data is retained
+    - **After 30 days**: Data may be permanently deleted
+
+    Exact timing and status are displayed in the editor.
+  </Accordion>
+
+  <Accordion title="Can I export my data?">
+    Yes.
+
+    Database data and stored files can be exported depending on your plan. See the [plan comparison](#plan-comparison) for details.
+  </Accordion>
+
+  <Accordion title="Is YouBase production-ready?">
+    Yes.
+
+    YouBase 1.0 is designed to support real users, real data, and production projects running under custom domains.
+  </Accordion>
+
+  <Accordion title="What about projects using the legacy YouWare Backend (V1)?">
+    **Projects without YouWare Backend:**
+
+    - A **"Set up YouBase"** button appears in the YouBase tab
+    - Clicking it prompts you to update your project to the latest version
+    - After updating, you can use YouBase features, custom domains, and independent domain names
+    - **Note**: Any AI API (MCP) features in your project will stop working after the update
+
+    **Projects with YouWare Backend:**
+
+    - The legacy database UI is preserved
+    - YouBase upgrade is not available for these projects
+  </Accordion>
+
+  <Accordion title="How does the free trial work?">
+    - **New users**: Enjoy a 7-day free trial with full access to all features
+    - **Paid users**: Enable YouBase immediately without waiting
+    - **After trial expires**: YouBase automatically shuts down, but your data is retained for 30 days. Upgrade your subscription to restore access
+  </Accordion>
+</AccordionGroup>
