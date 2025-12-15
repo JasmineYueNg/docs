@@ -28,14 +28,6 @@ It allows you to view, manage, and export the data your project generates, and s
 
 The table list shows all database tables in your project.
 
-When no data exists yet, you will see a placeholder message:
-
-<Note>
-**No data yet.**
-
-Tables will appear here once your project starts storing information.
-</Note>
-
 Once data is available, the table list displays:
 
 - All tables in the project
@@ -156,8 +148,8 @@ Export behavior follows the same rules as database export: Free users are prompt
 In YouBase 1.0:
 
 <CardGroup cols={2}>
-  <Card title="Row Operations" icon="circle-check">
-    You **can** add, edit, and delete rows
+  <Card title="Row Operations" icon="circle-xmark">
+    You **cannot** manually add, edit, or delete rows
   </Card>
   <Card title="Schema Management" icon="circle-xmark">
     You **cannot** manually modify table structure
@@ -165,7 +157,7 @@ In YouBase 1.0:
 </CardGroup>
 
 <Warning>
-Tables and columns are managed by the system. Users cannot add or remove tables or columns directly. This design keeps data structures stable and avoids accidental schema changes in production projects.
+Tables, columns, and row data are managed by the system. Users cannot add, edit, or remove tables, columns, or rows directly. This design keeps data structures stable and avoids accidental changes in production projects.
 </Warning>
 
 ---
@@ -404,3 +396,5 @@ If your project:
 
 You can keep the **Database** module disabled and enable it later when your project grows.
 </Note>
+
+
