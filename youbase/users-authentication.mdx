@@ -1,14 +1,26 @@
 ---
 title: "Users & Authentication"
-description: "Manage user accounts, login access, and identity for your YouBase project with email and Google authentication."
+description: "Quickly integrate login functionality into your project with built-in user management and centralized authentication."
 canonical: "https://docs.youware.com/youbase/users-authentication"
 ---
 
-# Users & Authentication
+## Core Capabilities
 
-Users & Auth provides account and identity management for your project.
+<CardGroup cols={3}>
+  <Card title="Login Integration" icon="right-to-bracket">
+    Add Email and Google login to your YouWare project with minimal setup
+  </Card>
+  <Card title="User Management" icon="users-gear">
+    Maintain a centralized user list with essential management features in YouBase
+  </Card>
+  <Card title="Dashboard Analytics" icon="chart-line">
+    Monitor user activity and usage patterns through a dedicated dashboard
+  </Card>
+</CardGroup>
 
-It allows your project to recognize users, manage login access, and associate data or behavior with specific user accounts.
+---
+
+## Authentication Methods
 
 <CardGroup cols={3}>
   <Card title="Email Login" icon="envelope">
@@ -17,18 +29,82 @@ It allows your project to recognize users, manage login access, and associate da
   <Card title="Google Login" icon="google">
     One-click Google OAuth integration
   </Card>
-  <Card title="Access Control" icon="shield-halved">
-    Block or allow user access instantly
+  <Card title="Temporary Accounts" icon="user-clock">
+    Allow users to access your app without registration
   </Card>
 </CardGroup>
 
+### Authentication Settings
+
+Configure which login methods your project supports and whether to allow new user registrations.
+
+<Tabs>
+  <Tab title="Email Login">
+    <Card title="Email Authentication" icon="envelope">
+      Traditional email and password authentication.
+      
+      **Features:**
+      - Sign in with email and password
+      - Optional email verification
+      - Forgot password flow
+      
+      Authentication flows, password handling, and credential storage are fully managed by YouBase.
+    </Card>
+  </Tab>
+  <Tab title="Google Login">
+    <Card title="Google OAuth" icon="google">
+      One-click login with Google accounts.
+      
+      **Features:**
+      - Quick sign-in via Google account
+      - No password management required
+      - Trusted identity provider
+      
+      Users can sign in instantly with their existing Google account.
+    </Card>
+  </Tab>
+  <Tab title="Temporary Accounts">
+    <Card title="Temporary Accounts" icon="user-clock">
+      Let users access your app without registration.
+      
+      **Features:**
+      - Anonymous login support for frictionless access
+      - Automatic user record creation for temporary sessions
+      - Temporary users included in analytics
+      
+      Ideal for reducing barriers to entry and improving conversion.
+    </Card>
+  </Tab>
+</Tabs>
+
+<Warning>
+Sensitive authentication data (such as passwords or tokens) is never exposed to the frontend.
+</Warning>
+
 ---
 
-## User List Overview
+## User Management
 
-The user list displays all registered users in your project.
+The User Management module consists of two main components:
+- **User List**: View user details and perform management actions
+- **Dashboard**: Monitor total users (registered and temporary), daily activity, and trends
 
-When no users exist yet, the empty state shows:
+### Dashboard
+
+The Dashboard provides visual insights into your user base:
+
+<CardGroup cols={2}>
+  <Card title="User Statistics" icon="users">
+    View total counts for registered users and temporary accounts
+  </Card>
+  <Card title="Daily Trends" icon="chart-area">
+    Track daily activity and growth patterns over time
+  </Card>
+</CardGroup>
+
+### User List
+
+The User List displays all registered users in your project.
 
 <Note>
 **No users yet.**
@@ -36,23 +112,17 @@ When no users exist yet, the empty state shows:
 Users will appear here once someone signs up or logs in.
 </Note>
 
-Once users are present, the list displays key information for each user account.
-
----
-
-## User Table Details
-
-Each user row includes:
+Each user row displays the following information:
 
 <CardGroup cols={2}>
   <Card title="User ID" icon="fingerprint">
-    System-generated, unique identifier
+    System-generated unique identifier
   </Card>
   <Card title="Email Address" icon="at">
     User's registered email
   </Card>
   <Card title="Login Method" icon="right-to-bracket">
-    Email or Google
+    Email, Google, or Temporary
   </Card>
   <Card title="Account Status" icon="circle-check">
     Active or Blocked
@@ -66,102 +136,68 @@ Each user row includes:
 All timestamps are displayed in the user's local timezone. User IDs are immutable and used internally to associate data with users.
 </Info>
 
----
+### User Operations
 
-## Supported Login Methods
-
-In YouBase 1.0, the following login methods are supported:
-
-<Tabs>
-  <Tab title="Email Login">
-    <Card title="Email Authentication" icon="envelope">
-      Traditional email and password authentication.
-      
-      **Features:**
-      - Secure password storage
-      - Password validation
-      - Account verification
-      
-      Authentication flows, password handling, and credential storage are fully managed by YouBase.
-    </Card>
-  </Tab>
-  <Tab title="Google Login">
-    <Card title="Google OAuth" icon="google">
-      One-click login with Google accounts.
-      
-      **Features:**
-      - Seamless OAuth integration
-      - No password management required
-      - Trusted identity provider
-      
-      Users can sign in with their existing Google account instantly.
-    </Card>
-  </Tab>
-</Tabs>
-
-<Warning>
-Sensitive authentication data (such as passwords or tokens) is never exposed to the frontend.
-</Warning>
-
----
-
-## User Status & Access Control
-
-You can manage user access directly from the user list.
-
-<Steps>
-  <Step title="View User List">
-    Navigate to the Users & Auth section in YouBase to see all registered users.
-  </Step>
-  <Step title="Select User">
-    Click on a user row to view their details and available actions.
-  </Step>
-  <Step title="Block or Allow Access">
-    Toggle user access status. Blocking a user immediately prevents further login.
-  </Step>
-</Steps>
+User management supports four actions:
 
 <CardGroup cols={2}>
-  <Card title="Allow Access" icon="circle-check">
-    User can log in and use the application normally
+  <Card title="Add User" icon="user-plus">
+    Manually create a new user account
   </Card>
-  <Card title="Block Access" icon="ban">
-    User cannot log in until access is restored. Existing data is retained.
+  <Card title="Delete User" icon="user-minus">
+    Remove a user account (the user can re-register afterwards; useful for removing test data)
+  </Card>
+  <Card title="Block User" icon="ban">
+    Suspend user access (blocked users cannot log in or re-register)
+  </Card>
+  <Card title="Unblock User" icon="circle-check">
+    Restore access for a previously blocked user
   </Card>
 </CardGroup>
 
 <Tip>
-User deletion is not supported in YouBase 1.0 to prevent accidental data loss. Block users instead of deleting them.
+**Delete vs Block**: Deleted users can re-register with the same email. Blocked users cannot log in or re-register until unblocked.
 </Tip>
 
 ---
 
-## How Users Are Used in Projects
+## Email Security
 
-Users & Auth is required for:
+Configure email-related security options for your project.
 
-<CardGroup cols={2}>
-  <Card title="Member-only Features" icon="lock">
-    Login-based or restricted access features
+<Warning>
+**Email Verification**: Require users to verify their email address before logging in. Enable this option to ensure users provide valid email addresses.
+</Warning>
+
+<CardGroup cols={1}>
+  <Card title="Email Verification" icon="envelope-circle-check">
+    Require users to verify their email before accessing the app
   </Card>
-  <Card title="User Data Storage" icon="database">
-    Store and retrieve user-specific data
+  <Card title="Password Reset Verification" icon="key">
+    Require email verification code when resetting passwords
   </Card>
-  <Card title="Personalization" icon="user-gear">
-    Customize experiences per user
-  </Card>
-  <Card title="Usage Tracking" icon="chart-line">
-    Track usage history per user
+  <Card title="Logout All Devices on Password Change" icon="right-from-bracket">
+    Automatically sign out all sessions when a user changes their password
   </Card>
 </CardGroup>
 
+---
+
+## Custom UI
+
+YouBase provides a default login interface styled for YouWare.
+
 <Info>
-If your project does not require user identity, this module is optional.
+**Customizing the Login UI**
+
+You can customize the login interface to match your brand through iAgent.
+
+If you've customized the UI and later modify your Auth settings, make sure to notify iAgent so the login page reflects the latest configuration.
 </Info>
 
 ---
 
-# Common Use Cases
+## Common Use Cases
 
 Below are some common scenarios where **Users & Authentication** is useful.
 
@@ -257,6 +293,3 @@ If your project:
 
 You can keep **Users & Auth** disabled and enable it later when needed.
 </Note>
-
-
-
