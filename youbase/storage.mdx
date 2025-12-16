@@ -4,11 +4,7 @@ description: "Learn how to use the YouBase Storage module for file upload and do
 canonical: "https://docs.youware.com/youbase/storage"
 ---
 
-# Storage
-
-Storage provides file upload and download capabilities for your project.
-
-It is enabled automatically once YouBase is active.
+The storage list shows all files and folders stored in your project, organized by folders.
 
 <CardGroup cols={3}>
   <Card title="File Upload" icon="upload">
@@ -21,22 +17,6 @@ It is enabled automatically once YouBase is active.
     Files remain accessible across sessions and devices
   </Card>
 </CardGroup>
-
----
-
-## Storage Overview
-
-The storage list shows all files and folders stored in your project.
-
-When no files exist, the empty state shows:
-
-<Note>
-**No files yet.**
-
-Files will appear here once they're uploaded.
-</Note>
-
-Once files are available, the storage list displays all uploaded content organized by folders.
 
 ---
 
@@ -63,17 +43,6 @@ The storage list displays items in a table view with the following columns:
 Clicking a folder opens its contents. All timestamps are displayed in the user's local timezone.
 </Info>
 
-### Pagination
-
-<CardGroup cols={2}>
-  <Card title="Paginated Browsing" icon="book-open">
-    Navigate through files page by page
-  </Card>
-  <Card title="25 Items Per Page" icon="list-ol">
-    Up to 25 items displayed per page
-  </Card>
-</CardGroup>
-
 ---
 
 ## Downloading Files
@@ -88,7 +57,7 @@ You can download files directly from the storage list.
     Click the Download button to start the download process.
   </Step>
   <Step title="Wait for Preparation">
-    For multiple files, a loading state ("Preparing…") is shown during packaging.
+    For multiple files, a loading state is shown during packaging.
   </Step>
   <Step title="Download Starts">
     Downloads start automatically once preparation is complete.
@@ -111,7 +80,7 @@ You can download files directly from the storage list.
       
       **Behavior:**
       - Selected items are packaged into a ZIP file
-      - A loading state ("Preparing…") is shown during preparation
+      - A loading state is shown during preparation
       - Downloads start automatically once preparation is complete
     </Card>
   </Tab>
@@ -143,9 +112,9 @@ Use refresh to see newly uploaded files or verify storage changes made by your a
 
 ---
 
-## Storage Limitations (YouBase 1.0)
+## Storage Limitations
 
-In YouBase 1.0, certain features are intentionally limited:
+In YouBase, certain features are intentionally limited:
 
 <CardGroup cols={2}>
   <Card title="Upload & Download" icon="circle-check">
@@ -163,7 +132,7 @@ In YouBase 1.0, certain features are intentionally limited:
 </CardGroup>
 
 <Warning>
-These limitations are intentional to reduce risk and complexity in early versions. File management features will be expanded in future releases.
+These limitations are intentional to reduce risk and complexity in early versions.
 </Warning>
 
 ---
@@ -295,16 +264,5 @@ You may not need Storage if your project:
 
 Storage can be enabled later when your project expands into file-based workflows.
 </Note>
-
----
-
-## Note (YouBase 1.0)
-
-<Info>
-In YouBase 1.0, Storage supports **upload + download**, but some management features (like previews and deletion) are intentionally limited.
-
-This keeps early versions safer and simpler while most real workflows still work end-to-end.
-</Info>
-
 
 
