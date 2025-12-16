@@ -73,8 +73,7 @@
           {
             "group": "Advanced",
             "pages": [
-              "features/mcp-market",
-              "features/youware-backend"
+              "features/mcp-market"
             ]
           }
         ]
@@ -89,17 +88,9 @@
             ]
           },
           {
-            "group": "AI API",
-            "pages": [
-              "connections/ai-api-connection",
-              "connections/ai-api-models"
-            ]
-          },
-          {
             "group": "Highly Recommend",
             "pages": [
-              "connections/figma-connection",
-              "connections/youware-backend-connection"
+              "connections/figma-connection"
             ]
           },
           {

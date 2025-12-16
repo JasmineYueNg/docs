@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouWare Docs - YouBase 导航预览</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: #f8f8f8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: white;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header h1 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .nav-preview {
+            background: white;
+            border-bottom: 2px solid #f0f0f0;
+            padding: 0;
+            display: flex;
+            gap: 0;
+        }
+
+        .nav-tab {
+            padding: 14px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            cursor: pointer;
+            border: none;
+            background: none;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .nav-tab:hover {
+            background: #f5f5f5;
+            color: #555644;
+        }
+
+        .nav-tab.youbase {
+            opacity: 0.45;
+            color: #AAB39A;
+            font-weight: 400;
+        }
+
+        .nav-tab.youbase:hover {
+            opacity: 0.6;
+            color: #AAB39A;
+            background: rgba(170, 179, 154, 0.05);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .comparison-box {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+
+        .comparison-box h3 {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .comparison-box .nav-tab {
+            display: inline-block;
+            padding: 8px 12px;
+            font-size: 13px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .info-box {
+            background: #f0f8ff;
+            border-left: 4px solid #55644A;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        .info-box p {
+            color: #333;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 12px;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 YouWare Docs - YouBase 导航预览</h1>
+            <p class="description">以下是添加 YouBase 到导航菜单后的效果预览，带浅色样式</p>
+        </div>
+
+        <div class="nav-preview">
+            <button class="nav-tab">Introduction</button>
+            <button class="nav-tab">Features</button>
+            <button class="nav-tab">Connections</button>
+            <button class="nav-tab">Prompt Craft</button>
+            <button class="nav-tab youbase">YouBase</button>
+        </div>
+
+        <div class="content">
+            <h2 style="margin-bottom: 20px; font-size: 18px; color: #333;">📊 效果对比</h2>
+            
+            <div class="comparison">
+                <div class="comparison-box">
+                    <h3>✅ 其他标签（正常）</h3>
+                    <p class="description">全色显示，100% 不透明</p>
+                    <button class="nav-tab" style="margin-top: 10px;">Introduction</button>
+                </div>
+
+                <div class="comparison-box">
+                    <h3>👻 YouBase 标签（浅色）</h3>
+                    <p class="description">透明度 45%，显得很不起眼</p>
+                    <button class="nav-tab youbase" style="margin-top: 10px;">YouBase</button>
+                </div>
+            </div>
+
+            <h2 style="margin-bottom: 20px; font-size: 18px; color: #333;">🎯 配置详情</h2>
+
+            <div class="info-box">
+                <p><strong>📍 位置：</strong> 移到最右边（第 5 个标签）</p>
+                <p style="margin-top: 10px;"><strong>🎨 样式：</strong></p>
+                <ul style="margin-left: 20px; margin-top: 8px; color: #333;">
+                    <li>正常状态：透明度 45%，颜色 #AAB39A</li>
+                    <li>悬停状态：透明度 60%，仍是浅色</li>
+                    <li>效果：看起来不重要但仍可点击</li>
+                </ul>
+                <p style="margin-top: 10px;"><strong>📁 文件改动：</strong></p>
+                <ul style="margin-left: 20px; margin-top: 8px; color: #333;">
+                    <li>✅ docs.json - 更新导航顺序</li>
+                    <li>✅ custom.css - 添加 YouBase 样式</li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="margin-top: 30px; background: #fffaf0; border-left-color: #ff9800;">
+                <p><strong>💡 提示：</strong> 这是本地预览效果。实际效果可能因浏览器和系统有所不同。</p>
+            </div>
+
+            <h2 style="margin-bottom: 20px; font-size: 18px; color: #333; margin-top: 40px;">🔗 YouBase 页面</h2>
+            <p class="description">部署后可访问的 YouBase 文档页面：</p>
+            <ul style="margin-left: 20px; margin-top: 10px; color: #333; font-size: 14px;">
+                <li><code>/youbase/introduction</code> - YouBase 介绍</li>
+                <li><code>/youbase/database</code> - 数据库模块</li>
+                <li><code>/youbase/users-authentication</code> - 用户与认证</li>
+                <li><code>/youbase/storage</code> - 存储模块</li>
+                <li><code>/youbase/secrets</code> - 密钥管理</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+
