@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouBase Introduction - Preview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: #f8f9fa;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* Header */
+        .page-header {
+            margin-bottom: 32px;
+        }
+
+        .page-header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 8px;
+        }
+
+        .page-header .description {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Card Group */
+        .card-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .card-group {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.2s;
+        }
+
+        .card:hover {
+            border-color: #55644A;
+            box-shadow: 0 4px 12px rgba(85, 100, 74, 0.1);
+        }
+
+        .card .icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #55644A 0%, #6b7a5c 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 6px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Content */
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #111;
+            margin: 48px 0 20px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        h1:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #111;
+            margin: 32px 0 16px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin: 24px 0 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #374151;
+        }
+
+        strong {
+            color: #111;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 32px 0;
+        }
+
+        /* Callout boxes */
+        .callout {
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 20px 0;
+            display: flex;
+            gap: 12px;
+        }
+
+        .callout .icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .callout-content {
+            flex: 1;
+        }
+
+        .callout p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .callout p + p {
+            margin-top: 8px;
+        }
+
+        .tip {
+            background: linear-gradient(135deg, #f0f9eb 0%, #e8f5e0 100%);
+            border: 1px solid #c3e6b5;
+        }
+
+        .tip .icon {
+            color: #55644A;
+        }
+
+        .warning {
+            background: linear-gradient(135deg, #fff8e6 0%, #fff3d4 100%);
+            border: 1px solid #ffd666;
+        }
+
+        .warning .icon {
+            color: #d97706;
+        }
+
+        .info {
+            background: linear-gradient(135deg, #e8f4fd 0%, #dbeafe 100%);
+            border: 1px solid #93c5fd;
+        }
+
+        .info .icon {
+            color: #2563eb;
+        }
+
+        .note {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            border: 1px solid #d1d5db;
+        }
+
+        .note .icon {
+            color: #6b7280;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        li ul, li ol {
+            margin: 8px 0;
+        }
+
+        /* Image */
+        .doc-image {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        /* Table */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 24px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background: #f9fafb;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        td {
+            color: #4b5563;
+        }
+
+        tr:hover td {
+            background: #f9fafb;
+        }
+
+        /* Accordion */
+        .accordion-group {
+            margin: 24px 0;
+        }
+
+        .accordion {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: #f9fafb;
+            padding: 16px 20px;
+            font-weight: 600;
+            color: #111;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .accordion-header:hover {
+            background: #f3f4f6;
+        }
+
+        .accordion-header::after {
+            content: '+';
+            font-size: 20px;
+            color: #9ca3af;
+        }
+
+        .accordion.open .accordion-header::after {
+            content: '−';
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 16px 20px;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .accordion.open .accordion-content {
+            display: block;
+        }
+
+        .accordion-content p {
+            margin: 0;
+        }
+
+        .accordion-content p + p {
+            margin-top: 12px;
+        }
+
+        .accordion-content ul {
+            margin: 8px 0;
+        }
+
+        /* Links */
+        a {
+            color: #55644A;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Badge */
+        .beta-badge {
+            display: inline-block;
+            background: #55644A;
+            color: white;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+            vertical-align: middle;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="page-header">
+            <h1 style="margin: 0; border: none; padding: 0;">YouBase Introduction <span class="beta-badge">BETA</span></h1>
+            <p class="description">Learn what YouBase is and how it powers your YouWare applications with cloud backend infrastructure, authentication, database, storage, and more.</p>
+        </div>
+
+        <!-- Card Group -->
+        <div class="card-group">
+            <div class="card">
+                <div class="icon"><i class="fas fa-database"></i></div>
+                <h3>Built-in Backend</h3>
+                <p>Complete cloud infrastructure</p>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-shield-halved"></i></div>
+                <h3>Enterprise-Grade Security</h3>
+                <p>Private, encrypted, and always under your control</p>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-bolt"></i></div>
+                <h3>Zero Configuration</h3>
+                <p>Just describe what you need in natural language</p>
+            </div>
+        </div>
+
+        <!-- What is YouBase -->
+        <h1 style="border-top: none; padding-top: 0; margin-top: 0;">What is YouBase?</h1>
+        
+        <p><strong>YouBase is YouWare's built-in cloud backend infrastructure</strong> — think of it as the backend that powers your application.</p>
+        
+        <p>If YouWare's visual interface is your app's "face", then YouBase is its "brain" and "memory". Without YouBase, your app is just a pretty picture: forms can't save data, users can't log in, and nothing persists. <strong>With YouBase enabled, your app can actually "remember" user data and display personalized content for each person.</strong></p>
+
+        <hr>
+
+        <h2>Overview</h2>
+
+        <p>YouBase is YouWare's cloud backend infrastructure that gives your project complete backend capabilities — including data storage, user authentication, server-side logic, and file management.</p>
+
+        <p>Simply describe what you need in natural language, and YouWare automatically generates the frontend and backend code, then runs it in the cloud for you. YouBase provides managed hosting, compute, and storage that scales on demand, from your first prototype to millions of users.</p>
+
+        <p><strong>YouBase runs on YouWare-managed cloud infrastructure under your project's domain</strong> (including custom domains), so you get enterprise-grade reliability without the complexity.</p>
+
+        <hr>
+
+        <!-- Why Choose YouBase -->
+        <h1>Why Choose YouBase</h1>
+
+        <div class="card-group">
+            <div class="card">
+                <div class="icon"><i class="fas fa-arrow-up"></i></div>
+                <h3>Scales on Demand</h3>
+                <p>From prototype to production, YouBase scales seamlessly with your needs. Whether 10 users or 100,000 users visit your site, it loads instantly.</p>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-shield"></i></div>
+                <h3>Enterprise-Grade Security</h3>
+                <p>Private, encrypted, and always under your control. Includes enterprise-level authentication, granular access controls, and compliance best practices.</p>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-bolt"></i></div>
+                <h3>High Performance</h3>
+                <p>Fast and stable worldwide — no regional latency, no random downtime, no "server overload" moments.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Getting Started -->
+        <h1>Getting Started with YouBase</h1>
+
+        <img src="images/youbase-introduction.png" alt="YouBase Introduction" class="doc-image">
+
+        <div class="callout tip">
+            <div class="icon"><i class="fas fa-lightbulb"></i></div>
+            <div class="callout-content">
+                <p><strong>YouBase requires a Pro or Ultra plan.</strong> When your project needs backend functionality (such as user authentication or file storage), YouWare will prompt you to upgrade and enable YouBase.</p>
+            </div>
+        </div>
+
+        <h2>Setup for Existing Projects</h2>
+
+        <p>For projects created <strong>before the YouBase 1.0 beta (December 16, 2025)</strong>, enabling YouBase depends on your project type:</p>
+
+        <h3>Projects Without YouWare Backend MCP</h3>
+
+        <ul>
+            <li>The YouBase tab displays a <strong>"Set up YouBase"</strong> button</li>
+            <li>Clicking it prompts you to update your project to the latest version</li>
+            <li>After updating, you gain access to:
+                <ul>
+                    <li>YouBase features (Database, Users, Functions, Storage)</li>
+                    <li>Independent and custom domain support</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="callout warning">
+            <div class="icon"><i class="fas fa-triangle-exclamation"></i></div>
+            <div class="callout-content">
+                <p>If your project uses AI API (MCP) features, those features will stop working after the update.</p>
+            </div>
+        </div>
+
+        <h3>Projects With YouWare Backend MCP</h3>
+
+        <ul>
+            <li>These projects can <strong>continue to work normally</strong> with the legacy database UI</li>
+            <li>The new Agent is <strong>not compatible</strong> with YouWare Backend MCP projects</li>
+            <li><strong>YouBase cannot be enabled</strong> on these projects</li>
+        </ul>
+
+        <div class="callout warning">
+            <div class="icon"><i class="fas fa-triangle-exclamation"></i></div>
+            <div class="callout-content">
+                <p><strong>Projects using the YouWare Backend MCP cannot use YouBase.</strong> The new Agent cannot work alongside the legacy backend configuration.</p>
+                <p>You have two options:</p>
+                <p>1. <strong>Keep using the legacy backend</strong> - Continue with your current YouWare Backend project as it is. It will keep working indefinitely.</p>
+                <p>2. <strong>Switch to YouBase</strong> - If you want to use YouBase features, you need to:</p>
+                <ul>
+                    <li>Download your project code from the legacy project</li>
+                    <li>Create a new project with YouBase enabled</li>
+                    <li>Upload your downloaded code to the new YouBase project</li>
+                </ul>
+                <p>There is no way to automatically migrate or convert a legacy backend project to YouBase.</p>
+                <p>For assistance, contact <a href="mailto:support@youware.com">support@youware.com</a></p>
+            </div>
+        </div>
+
+        <h2>For New Projects</h2>
+
+        <p>Projects created <strong>after the YouBase 1.0 beta</strong>:</p>
+
+        <ul>
+            <li>Cannot enable the YouWare Backend MCP or AI API</li>
+            <li>Use YouBase for all backend functionality</li>
+        </ul>
+
+        <div class="callout info">
+            <div class="icon"><i class="fas fa-circle-info"></i></div>
+            <div class="callout-content">
+                <p>Existing projects already using the YouWare Backend MCP or AI API can continue using those features indefinitely.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Pricing -->
+        <h1>Pricing & Plans</h1>
+
+        <p>YouBase offers flexible plans to match your project's growth, from early prototypes to production applications.</p>
+
+        <h2>Trial & Downgrade Policy</h2>
+
+        <p>When downgrading from Pro/Ultra to Free, YouBase retains your data for 7 days with the same experience as the Free plan trial period. Database export is disabled during this time. After 7 days, the backend automatically shuts down, but your data remains stored for an additional 30 days.</p>
+
+        <h2>Plan Comparison</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Free</th>
+                        <th>Pro</th>
+                        <th>Ultra</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pricing</strong></td>
+                        <td>$0</td>
+                        <td>$20/40</td>
+                        <td>$60/100/200/500</td>
+                    </tr>
+                    <tr>
+                        <td><strong>YouBase Access</strong></td>
+                        <td>✗</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="font-size: 13px; color: #666;">Includes: Auth login, Secrets, Database, and all core features</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Database Export</strong></td>
+                        <td>✗ Cannot download</td>
+                        <td>✓ Download full DB or tables</td>
+                        <td>✓ Download full DB or tables</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Database Bookmark Retention</strong></td>
+                        <td>1 day</td>
+                        <td>14 days</td>
+                        <td>14 days</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Database Restore</strong></td>
+                        <td>✗</td>
+                        <td>✗</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Database Size per Project</strong></td>
+                        <td><em>Unlimited during Beta</em></td>
+                        <td><em>Unlimited during Beta</em></td>
+                        <td><em>Unlimited during Beta</em></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Storage per Project</strong></td>
+                        <td><em>Unlimited during Beta</em></td>
+                        <td><em>Unlimited during Beta</em></td>
+                        <td><em>Unlimited during Beta</em></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Registered Users per Project</strong></td>
+                        <td><em>Unlimited during Beta</em></td>
+                        <td><em>Unlimited during Beta</em></td>
+                        <td><em>Unlimited during Beta</em></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout note">
+            <div class="icon"><i class="fas fa-sticky-note"></i></div>
+            <div class="callout-content">
+                <p>Features marked as "Unlimited during YouBase Beta" are temporarily unrestricted while YouBase is in beta. Standard limits will apply after the beta period ends.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- FAQs -->
+        <h1>FAQs</h1>
+
+        <div class="accordion-group">
+            <div class="accordion">
+                <div class="accordion-header">Do I need to enable all YouBase modules?</div>
+                <div class="accordion-content">
+                    <p>No.</p>
+                    <p>YouBase is modular. You can use Database, Users, Functions, or Storage independently based on your project's needs.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header">Can I use YouBase without writing backend code?</div>
+                <div class="accordion-content">
+                    <p>Yes.</p>
+                    <p>Many projects use Database, Users, and Storage without writing any backend code. Functions are only required for advanced custom logic or third-party integrations.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header">What happens when my subscription expires?</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li><strong>Days 0–30</strong>: YouBase is disabled, but your data is retained</li>
+                        <li><strong>After 30 days</strong>: Data will be permanently deleted</li>
+                    </ul>
+                    <p>Exact timing and status are displayed in the editor.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header">Can I export my data?</div>
+                <div class="accordion-content">
+                    <p>Yes.</p>
+                    <p>Database data and stored files can be exported depending on your plan. See the <a href="#plan-comparison">plan comparison</a> for details.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header">Is YouBase production-ready?</div>
+                <div class="accordion-content">
+                    <p>Yes.</p>
+                    <p>YouBase 1.0 is designed to support real users, real data, and production projects running under custom domains.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header">What about projects using the YouWare Backend MCP (V1)?</div>
+                <div class="accordion-content">
+                    <p><strong>Projects without YouWare Backend MCP:</strong></p>
+                    <ul>
+                        <li>A <strong>"Set up YouBase"</strong> button appears in the YouBase tab</li>
+                        <li>Clicking it prompts you to update your project to the latest version</li>
+                        <li>After updating, you can use YouBase features, custom domains, and independent domain names</li>
+                        <li><strong>Note</strong>: Any AI API (MCP) features in your project will stop working after the update</li>
+                    </ul>
+                    <p><strong>Projects with YouWare Backend MCP:</strong></p>
+                    <ul>
+                        <li>The legacy database UI is preserved</li>
+                        <li>YouBase update is not available for these projects</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header">How does the free trial work?</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li><strong>Paid users</strong>: Enable YouBase immediately without waiting</li>
+                        <li><strong>After trial expires</strong>: YouBase automatically shuts down, but your data is retained for 30 days. Upgrade your subscription to restore access</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const accordion = header.parentElement;
+                accordion.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
