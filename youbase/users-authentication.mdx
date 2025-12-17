@@ -185,14 +185,22 @@ Configure email-related security options for your project.
 
 ## Custom UI
 
-YouBase provides a default login interface styled for YouWare.
+The login component uses a platform-provided default style.
+
+To customize the login UI, send prompts to Agent, which modifies and re-renders the UI based on your instructions.
 
 <Info>
-**Customizing the Login UI**
+**Example prompt:**
 
-You can customize the login interface to match your brand through Agent.
+Update the default login UI to match our current website style.
+</Info>
 
-If you've customized the UI and later modify your Auth settings, make sure to notify Agent so the login page reflects the latest configuration.
+If you later update your Auth configuration, send another prompt to Agent to re-render the login UI based on the latest Auth configuration.
+
+<Info>
+**Example prompt:**
+
+Re-render the login UI based on the latest Auth configuration.
 </Info>
 
 ---
