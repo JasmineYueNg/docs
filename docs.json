@@ -6,12 +6,12 @@
     "primary": "#55644A",
     "light": "#AAB39A"
   },
-  "appearance": {
-    "disableDarkMode": true
-  },
   "css": "/custom.css",
   "favicon": "/favicon.png",
-  "logo": "/logo/youware-logo.png",
+  "logo": {
+    "light": "/logo/youware-logo.png",
+    "dark": "/logo/youware-logo-dark.svg"
+  },
   "topbarCta": {
     "name": "YouWare",
     "type": "link",
