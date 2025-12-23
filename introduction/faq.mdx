@@ -102,34 +102,34 @@ Welcome to YouWare! We've built YouWare to be the fastest, most intuitive way to
     - "Add a sticky navigation bar with three links: Home, Features, and Pricing."
   </Accordion>
   <Accordion title="Does YouWare support full-stack development (backend and database)?">
-    ### Current Backend Support
+    ### YouBase — Built-in Backend Infrastructure
 
-    **Built-in Backend System**: YouWare has its own integrated backend infrastructure. You no longer need to rely solely on external services.
+    **YouBase** is YouWare's integrated backend solution. It provides everything you need for full-stack development without external services:
 
-    **Supabase Integration**: In addition to our native backend, Supabase remains a supported toolchain option. Connect your Supabase database by providing valid access keys and clearly describing your data goals to the AI.
+    - **Users & Authentication**: Email login, Google OAuth, and temporary accounts
+    - **Database**: Create and manage tables with simple prompts
+    - **Storage**: File uploads and media management
+    - **Secrets**: Secure API key storage
 
-    **Database Management**: You can create and manage databases directly within YouWare:
+    ### How to Use
 
-    - Creating new databases through simple prompts
-    - Managing tables and data structures
-    - Real-time database operations
+    YouBase is built into every YouWare project. Simply describe your backend needs to the Agent:
+
+    - *"Add user login to my app"*
+    - *"Create a database table for storing user feedback"*
+    - *"Let users upload profile pictures"*
 
     ### Deployment
 
-    **Cloud Deploy**: We offer a built-in publishing system to put your project online with one click, making it easy to launch both your website and backend together.
-
-    ### Roadmap
-
-    - Enhanced backend service capabilities
-    - More advanced database management features
+    **Cloud Deploy**: One-click publishing deploys both your frontend and YouBase backend together seamlessly.
   </Accordion>
   <Accordion title="Can I integrate external APIs or libraries into my project?">
     <Warning>
-      **Important Security Note**: If you integrate external APIs without using official YouWare MCP tools, there is a **risk of API key exposure** in your front-end code.
+      **Important Security Note**: If you integrate external APIs without using YouBase Secrets, there is a **risk of API key exposure** in your front-end code.
     </Warning>
-    **Official YouWare MCP Tools**: When using official YouWare MCP tools (like YouWare Backend), your API keys are stored securely in the backend and are not exposed in the front-end code.
+    **YouBase Secrets**: Store your API keys securely in YouBase Secrets. They are never exposed in the front-end code.
 
-    **Best Practice**: For sensitive API integrations, always use YouWare Backend to store API keys securely and make calls from the server side, rather than exposing them in client-side code.
+    **Best Practice**: For sensitive API integrations, always use YouBase Secrets to store API keys securely, rather than exposing them in client-side code.
   </Accordion>
   <Accordion title="Can I view the code or download it?">
     Yes, code visibility and ownership are core to our professional ethos.
@@ -189,26 +189,38 @@ Welcome to YouWare! We've built YouWare to be the fastest, most intuitive way to
   </Accordion>
 </AccordionGroup>
 
-## Backend, Databases & Full-Stack Development
+## YouBase — Backend & Full-Stack Development
 
 <AccordionGroup>
-  <Accordion title="How do I build apps with databases and user authentication?">
-    **YouWare Backend** is your all-in-one solution for full-stack development. It provides:
+  <Accordion title="What is YouBase and what does it provide?">
+    **YouBase** is YouWare's built-in backend infrastructure. It provides four core modules:
 
-    - **Database**: Store and retrieve data (votes, scores, comments, user profiles)
-    - **User Authentication**: Real user login with YouWare accounts
-    - **Edge Functions**: Automated server-side logic (calculate rankings, send notifications)
-
-    **Example:** Create a voting app by describing: *"Create a voting app with a database storing poll options and vote counts. Deploy a function that automatically updates percentages after each vote."*
+    - **Users & Authentication**: Email login, Google OAuth, temporary accounts, and user management
+    - **Database**: Create tables, store data, and query records with simple prompts
+    - **Storage**: Upload and manage files (images, documents, media)
+    - **Secrets**: Securely store API keys and sensitive configuration
 
     <Info>
-      Unlike other platforms that require piecing together multiple services, YouWare Backend is one unified, self-developed solution—database + auth + functions + storage all working together seamlessly.
+      YouBase is a unified, self-developed solution—auth + database + storage + secrets all working together seamlessly. No external services required.
     </Info>
   </Accordion>
-  <Accordion title="Can I use Supabase or other external databases?">
-    Yes! YouWare Backend is your default, but you can also connect **Supabase** by providing valid access keys and describing your data goals to the AI. The YouWare Backend approach requires zero configuration and works instantly—Supabase is available if you prefer external control.
+  <Accordion title="How do I build apps with databases and user authentication?">
+    Simply describe your needs to the Agent. YouBase handles the implementation automatically.
+
+    **Example prompts:**
+    - *"Add user login with email and Google"*
+    - *"Create a database table for blog posts with title, content, and author"*
+    - *"Let users upload profile pictures"*
+    - *"Store my OpenAI API key securely"*
+
+    **Example:** Create a voting app by describing: *"Create a voting app with user login. Store poll options and vote counts in the database. Show real-time results."*
   </Accordion>
-  <Accordion title="What real-world projects can I build with YouWare Backend?">
+  <Accordion title="Can I use Supabase or other external databases?">
+    Yes! While YouBase is the recommended default (zero configuration, works instantly), you can also connect **Supabase** via MCP by providing valid access keys and describing your data goals to the Agent.
+
+    **Recommendation:** Use YouBase for most projects—it's simpler and fully integrated. Use Supabase if you need specific features or prefer external control.
+  </Accordion>
+  <Accordion title="What real-world projects can I build with YouBase?">
     <Tabs>
       <Tab title="Voting Systems">
         Build real-time polls where results update instantly. Store vote counts and voter IDs, automatically calculate percentages.
@@ -222,16 +234,16 @@ Welcome to YouWare! We've built YouWare to be the fastest, most intuitive way to
       <Tab title="Quiz Platforms">
         Store quiz questions, user answers, and scores. Track progress across sessions.
       </Tab>
-      <Tab title="User Profiles">
+      <Tab title="Member-only Apps">
         Member-only areas with personalized experiences. Store user preferences and history.
       </Tab>
     </Tabs>
   </Accordion>
-  <Accordion title="How much does YouWare Backend cost?">
-    YouWare Backend uses your regular Credits. The cost depends on your usage:
+  <Accordion title="How much does YouBase cost?">
+    YouBase uses your regular Credits. The cost depends on your usage:
     - **Database reads/writes**: Small credit cost per operation
-    - **Function executions**: Credits deducted when functions run
-    - **Storage**: If you store files or large datasets
+    - **Storage**: Credits for file storage
+    - **Authentication**: Included with database operations
 
     You get a generous free tier to start building before any costs apply.
   </Accordion>
@@ -245,7 +257,7 @@ Welcome to YouWare! We've built YouWare to be the fastest, most intuitive way to
 
     **To add an integration:**
     1. Click the **MCP icon** in the sidebar
-    2. Browse available tools (YouWare Backend, AI API, Figma, Notion, etc.)
+    2. Browse available tools (Figma, Notion, GitHub, etc.)
     3. Enable the tools you want
     4. Describe what you need in natural language
 
@@ -282,12 +294,12 @@ Welcome to YouWare! We've built YouWare to be the fastest, most intuitive way to
 
     **Setup:** Generate a GitHub Personal Access Token, add the integration, and the AI will understand your entire project context.
   </Accordion>
-  <Accordion title="What happens if I integrate an external API without using YouWare's secure tools?">
+  <Accordion title="What happens if I integrate an external API without using YouBase Secrets?">
     <Warning>
       **Security Risk**: API keys exposed in front-end code can be compromised.
     </Warning>
 
-    **Best Practice**: Always use **YouWare Backend** to store API keys securely and make calls from the server side. This keeps sensitive credentials safe and prevents exposure in client-side code.
+    **Best Practice**: Always use **YouBase Secrets** to store API keys securely. This keeps sensitive credentials safe and prevents exposure in client-side code.
   </Accordion>
 </AccordionGroup>
 
