@@ -79,6 +79,26 @@
         ]
       },
       {
+        "tab": "YouBase",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "youbase/introduction"
+            ]
+          },
+          {
+            "group": "Modules",
+            "pages": [
+              "youbase/users-authentication",
+              "youbase/database",
+              "youbase/storage",
+              "youbase/secrets"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Connections",
         "groups": [
           {
@@ -113,26 +133,6 @@
             "group": "Prompt Craft",
             "pages": [
               "prompting/prompting"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "YouBase",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "youbase/introduction"
-            ]
-          },
-          {
-            "group": "Modules",
-            "pages": [
-              "youbase/users-authentication",
-              "youbase/database",
-              "youbase/storage",
-              "youbase/secrets"
             ]
           }
         ]
