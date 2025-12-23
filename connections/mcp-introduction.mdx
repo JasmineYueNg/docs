@@ -1,13 +1,13 @@
 ---
 title: "YouWare MCP Tools Introduction"
-description: "Learn how to integrate external services like ChatGPT, Figma, Notion, and more into your YouWare project with MCP Tools. Simple setup, powerful connections."
+description: "Learn how to integrate external services like Figma, Notion, and more into your YouWare project with MCP Tools. Simple setup, powerful connections."
 canonical: "https://docs.youware.com/connections/mcp-introduction"
 ---
 
 # Connect Your Project to Any Service
 
 <Info>
-  Connect your project to the services you love - ChatGPT, Figma, Notion, and dozens more.
+  Connect your project to the services you love - Figma, Notion, and dozens more.
 </Info>
 
 ![YouWare MCP Tools demonstration showing integration workflow](/images/mcp-tools-interface.png)
@@ -18,7 +18,7 @@ canonical: "https://docs.youware.com/connections/mcp-introduction"
   Remember when smartphones were just for calls? Then apps came along and changed everything. **That's exactly what MCP Tools do for your YouWare project.**
 </Tip>
 
-MCP Tools are like apps for your website. Install one, and suddenly your project can connect with the services you already love—ChatGPT, Figma, Notion, and dozens more. Think of them as smart adapters that help your site plug into the tools you rely on every day, so everything works together instead of living in separate silos.
+MCP Tools are like apps for your website. Install one, and suddenly your project can connect with the services you already love—Figma, Notion, and dozens more. Think of them as smart adapters that help your site plug into the tools you rely on every day, so everything works together instead of living in separate silos.
 
 ### What becomes possible?
 
@@ -129,9 +129,6 @@ Action: Click to enable the Figma tool in the MCP Tool panel
   <Card title="Research" icon="book-open">
     **Access research papers** → Integrate arXiv
   </Card>
-  <Card title="Image Generation" icon="image">
-    **Generate images** → Use built-in Image Generator
-  </Card>
 </CardGroup>
 
 <Tip>
@@ -158,7 +155,14 @@ Action: Click to enable the Figma tool in the MCP Tool panel
     **YouWare Backend** is our built-in data management solution—perfect for simple data storage and retrieval with zero configuration. **Supabase** is a more robust, full-featured database platform ideal for complex applications that need advanced querying, real-time updates, or authentication features. Choose based on your project's complexity.
   </Accordion>
   <Accordion title="Are my API keys and data secure?" icon="shield">
-    Yes. YouWare uses industry-standard encryption to protect all credentials and data. Your API keys are stored securely and never exposed in your code. We follow best practices for data privacy and security, and you maintain full control over your connections at all times.
+    Yes. YouWare uses enterprise-grade encryption to protect all credentials and data. When using [YouBase](/youbase/introduction), your API keys can be stored in the **Secrets** module—a dedicated secure vault that ensures:
+
+    - **Server-side only access**: Secrets are never exposed to frontend code or sent to users' browsers
+    - **Enterprise-grade encryption**: All credentials are encrypted at rest and in transit
+    - **Hidden after creation**: Secret values are never displayed after you save them
+    - **Full control**: You can edit, rotate, or delete your secrets anytime
+
+    We follow industry best practices for data privacy and security. Your sensitive credentials stay on the server, accessible only through backend Functions—never visible to end users.
   </Accordion>
   <Accordion title="Can I remove a connection later?" icon="settings">
     Of course! You can add or remove connections anytime without affecting your project's core functionality. If you remove a connection, any features that depend on it will stop working, but your other features remain intact. You can always re-add it later if needed.
