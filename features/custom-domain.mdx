@@ -61,19 +61,6 @@ Use your registrar's dashboard to add the records:
 - Namecheap — provides dedicated CNAME record types for root and subdomains.
 - GoDaddy, Alibaba Cloud, and other legacy registrars may require you to use `www` or another subdomain.
 
-## Private Access (Passcode)
-
-Custom domains aren't only for branding—they can protect access, too. Pair your domain with **Private Access (Passcode)** to require a passcode before anyone can view your site.
-
-Perfect for:
-
-- Internal dashboards and tooling
-- Paid courses or premium lessons
-- Client deliverables and work-in-progress demos
-- Church groups, schools, or invitation-only communities
-
-Publish publicly, share privately, and still keep everything under your own URL.
-
 ## Configuration Values
 
 To connect your domain, add **two DNS records**. Copy the exact values from your YouWare dashboard for the project you are publishing.
@@ -96,14 +83,20 @@ Most providers automatically append your domain to the host field. Only enter th
 A CNAME record must be the only record for that hostname. Remove any conflicting A or AAAA records before saving.
 </Warning>
 
-## Root Domain CNAME Limitations
+## Unable to Connect to Your Domain?
 
-Standard DNS rules do not allow a CNAME record on the root domain (`example.com`). Work around the limitation in one of two ways:
+Standard DNS rules do not allow a CNAME record on the root domain (for example, `yourbrand.com` purchased from GoDaddy). Work around the limitation in one of two ways:
 
-- **Use a subdomain (recommended for most providers)**  
+- **Option 1: Use a subdomain**  
   Create a CNAME for `www.example.com`. Set up URL forwarding from the root to `www` if needed.
-- **Switch to a provider that supports root CNAMEs**  
-  Cloudflare (via CNAME flattening) and Namecheap support this behavior. Update your nameservers, then add the root CNAME directly.
+
+- **Option 2: Switch DNS to Cloudflare (Recommended)**  
+  If you must use the root domain (`example.com`), we highly recommend switching your DNS management to Cloudflare (it's free).
+  1. Create an account at [Cloudflare.com](https://www.cloudflare.com/).
+  2. Add your domain and follow the instructions to change your nameservers.
+  3. Once active, you can add a CNAME for `@` directly without errors.
+  
+  📘 **Detailed Guide:** [How to set up Cloudflare DNS](https://developers.cloudflare.com/dns/zone-setups/full-setup/setup/)
 
 ## Frequently Asked Questions
 
@@ -131,6 +124,19 @@ Still seeing issues after propagation? Email `support@youware.com` with:
 3. The email tied to your YouWare account
 
 We'll review your configuration and help you go live fast.
+
+## Private Access (Passcode)
+
+Custom domains aren't only for branding—they can protect access, too. Pair your domain with **Private Access (Passcode)** to require a passcode before anyone can view your site.
+
+Perfect for:
+
+- Internal dashboards and tooling
+- Paid courses or premium lessons
+- Client deliverables and work-in-progress demos
+- Church groups, schools, or invitation-only communities
+
+Publish publicly, share privately, and still keep everything under your own URL.
 
 ## Our Vision Forward
 
